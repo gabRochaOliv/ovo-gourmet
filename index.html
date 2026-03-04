@@ -20,21 +20,24 @@
 
     <!-- Meta Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1555382172213844');
         fbq('track', 'PageView');
     </script>
 
     <noscript>
         <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1555382172213844&ev=PageView&noscript=1"/>
+            src="https://www.facebook.com/tr?id=1555382172213844&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Meta Pixel Code -->
 
@@ -464,12 +467,16 @@
                         <span class="value">17</span>
                         <span class="cents">,00</span>
                     </div>
-                    <a href="https://pay.hotmart.com/V91898863K?off=0o9f8n3k&checkoutMode=10"
-                        class="cta-button primary pulse mx-auto" style="width: 100%;">
-                        PAGAR E ACESSAR TUDO AGORA <i data-lucide="arrow-right"></i>
+                    <span class="installment-price">ou 3x de R$6,45</span>
+
+                    <a href="https://pay.cakto.com.br/3a57fh5_793560" class="cta-button primary pulse mx-auto"
+                        style="width: 100%;">
+                        ACESSAR TUDO AGORA <i data-lucide="arrow-right"></i>
                     </a>
-                    <p class="text-sm mt-4 flex-center" style="color: var(--text-light); opacity: 0.7; gap: 0.5rem;">
-                        <i data-lucide="lock" style="width: 14px; height: 14px;"></i> Pagamento 100% Seguro
+                    <p class="text-sm mt-4 flex-center"
+                        style="color: var(--text-light); opacity: 0.7; gap: 0.5rem; white-space: nowrap;">
+                        <i data-lucide="lock" style="width: 14px; height: 14px; flex-shrink: 0;"></i> Pagamento 100%
+                        Seguro
                     </p>
                 </div>
 

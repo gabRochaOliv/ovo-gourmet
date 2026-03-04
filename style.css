@@ -123,7 +123,7 @@ body {
 }
 
 .flex-center {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -856,6 +856,15 @@ h6 {
 .cents {
     font-size: 2rem;
     font-weight: 600;
+}
+
+.installment-price {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-top: -1.2rem;
+    margin-bottom: 1rem;
+    display: block;
 }
 
 .guarantee-box {
