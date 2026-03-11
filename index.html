@@ -47,7 +47,7 @@
         imagesrcset="img/toposite-400.webp 400w, img/toposite-800.webp 800w, img/toposite-1200.webp 1200w"
         imagesizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px" fetchpriority="high">
     <style id="critical-css">
-        ��:root {
+        :root {
             --bg-color: #F8F6F0;
             --white: #FFFFFF;
             --primary-light: #B4DBBC;
@@ -119,36 +119,6 @@
             line-height: 1
         }
 
-        .cta-button i {
-            display: flex;
-            align-items: center
-        }
-
-        .cta-button:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(139, 203, 155, .6)
-        }
-
-        .pulse {
-            animation: pulse-anim 1.5s infinite cubic-bezier(.66, 0, 0, 1)
-        }
-
-        pulse-anim {
-            transform: scale(1)
-        }
-
-        .top-banner {
-            width: 100%
-        }
-
-        .top-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover
-        }
-
         .hero {
             padding: 6rem 0 8rem;
             background: linear-gradient(135deg, var(--accent) 0, var(--bg-color) 100%);
@@ -157,39 +127,10 @@
             text-align: center
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(139, 203, 155, .15) 0, transparent 70%);
-            border-radius: 50%;
-            z-index: 0
-        }
-
-        .hero-container {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            z-index: 1
-        }
-
-        .hero-bullets {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-            margin-bottom: 2.5rem
-        }
-
         .badge {
             display: inline-block;
-            background-color: var(--white);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
             color: var(--brown-main);
             padding: .5rem 1.25rem;
             border-radius: var(--radius-full);
@@ -197,267 +138,268 @@
             font-weight: 600;
             margin-bottom: 1.5rem;
             box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(92, 64, 51, .08)
+            border: 1px solid rgba(139, 203, 155, 0.3);
+            animation: float 3s ease-in-out infinite
         }
 
-        .headline {
-            font-size: 3.2rem;
+        .headline-creative {
+            font-size: 3.5rem;
             font-weight: 800;
-            margin-bottom: 1.25rem;
-            letter-spacing: -.5px
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            color: var(--brown-dark);
+            animation: fadeInUp 1s ease-out both
         }
 
-        .subheadline {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            max-width: 90%
+        .highlight-premium-pistache {
+            background: linear-gradient(120deg, var(--primary-dark) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block
         }
 
-        .hero-bullets {
-            list-style: none;
-            margin-bottom: 2.5rem
+        .highlight-price {
+            color: var(--white);
+            background: var(--brown-main);
+            padding: 2px 12px;
+            border-radius: 8px;
+            display: inline-block;
+            transform: rotate(-2deg);
+            box-shadow: 4px 4px 0px var(--primary);
+            font-weight: 900
         }
 
-        .hero-bullets li {
-            display: flex;
-            align-items: center;
-            gap: .75rem;
-            font-size: 1.05rem;
-            margin-bottom: 1rem;
-            font-weight: 500
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
         }
 
-        -badge {
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-10px)
+            }
+        }
+
+        @media (max-width: 768px) {
+            .headline-creative {
+                font-size: 2.2rem
+            }
+        }
+
+        /* Premium Offer Styles */
+        .premium-offer-box {
+            background: linear-gradient(145deg, rgba(62,39,35,0.95) 0%, rgba(92,64,51,0.9) 100%);
+            border: 2px solid rgba(255,215,0,0.3);
+            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.7), 0 0 40px rgba(255,215,0,0.1);
+            position: relative;
+        }
+        .easter-badge {
+            position: absolute !important;
+            top: -20px !important;
+            left: 0 !important;
+            right: 0 !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: fit-content !important;
+            background: linear-gradient(135deg, #FFD700 0%, #F5B041 100%) !important;
+            color: var(--brown-dark) !important;
+            padding: 6px 18px !important;
+            border-radius: 30px !important;
+            font-weight: 800 !important;
+            font-size: 0.85rem !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            box-shadow: 0 10px 20px rgba(255,215,0,0.4) !important;
+            white-space: nowrap !important;
+            z-index: 999 !important;
+            border: 2px solid var(--white) !important;
+            animation: pulse-anim 2s infinite cubic-bezier(.66,0,0,1) !important;
+            transform: none !important;
+        }
+        .premium-pricing-card {
+            position: relative;
+            background: #ffffff;
+            border: 3px solid var(--primary);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .discount-tag {
             position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--primary);
-            width: 45px;
-            height: 45px;
+            top: -25px;
+            right: -20px;
+            background: #E74C3C;
+            color: white;
+            padding: 10px;
             border-radius: 50%;
+            font-weight: 900;
+            font-size: 1.1rem;
+            transform: rotate(10deg);
+            box-shadow: 0 5px 15px rgba(231,76,60,0.4);
+            border: 3px solid white;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(139, 203, 155, .4);
-            z-index: 2;
-            border: 3px solid var(--white)
-        }
-
-        -badge svg {
-            width: 24px;
-            height: 24px;
-            stroke-width: 3
-        }
-
-        -container {
-            display: flex;
+            width: 80px;
+            height: 80px;
+            line-height: 1.1;
             flex-direction: column;
-            gap: 1rem
-        }
-
-        -container {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-            background-color: var(--bg-color)
-        }
-
-        .headline {
-            font-size: 2.8rem
-        }
-
-        .hero-container {
-            gap: 2rem
-        }
-
-        .hero {
-            padding: 4rem 0;
-            overflow: hidden
-        }
-
-        .hero-container {
-            grid-template-columns: 1fr;
             text-align: center;
-            gap: 2.5rem;
-            display: flex;
-            flex-direction: column
         }
-
-        .headline {
-            font-size: 2.2rem
+        .discount-tag span {
+            font-size: 0.75rem;
+            display: block;
         }
-
-        .subheadline {
-            max-width: 100%;
-            font-size: 1.1rem
+        .premium-price .value {
+            font-size: 6rem;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
         }
-
-        .hero-bullets {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left
+        .premium-bundle-list {
+            background: rgba(0,0,0,0.2);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255,255,255,0.05);
         }
-
-        .hero-bullets li {
-            font-size: 1rem
+        .premium-bundle-list .bundle-item {
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
         }
-
-        .cta-button {
-            width: 100%;
-            max-width: 320px;
-            font-size: 1.05rem;
-            padding: 1rem 1.5rem
+        .premium-bundle-list .bundle-item:last-child {
+            border-bottom: none;
         }
-
-        .headline {
-            font-size: 1.8rem
+        .premium-bundle-list .bundle-item i {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            box-shadow: 0 4px 10px rgba(139,203,155,0.3);
+            border: none;
         }
-
-        .cta-button {
-            padding: .8rem 1.2rem;
-            font-size: 1rem
+        .premium-bundle-list .bundle-item h4 {
+            color: var(--primary-light);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .premium-cta {
+            background: linear-gradient(135deg, #FFD700 0%, #F5B041 100%);
+            color: var(--brown-dark);
+            border: none;
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+            font-size: 1.3rem;
+            padding: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .premium-cta:hover {
+            background: linear-gradient(135deg, #F5B041 0%, #F39C12 100%);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.6);
+            transform: translateY(-5px);
+            color: var(--brown-dark);
+        }
+        @media (max-width: 480px) {
+            .premium-price .value { font-size: 4.5rem; }
+            .easter-badge { font-size: 0.85rem; padding: 6px 16px; top: -15px; }
+            .discount-tag { width: 65px; height: 65px; font-size: 0.9rem; top: -15px; right: -10px; }
+            .premium-cta { font-size: 1.1rem; padding: 1.2rem; }
         }
     </style>
-    <style id="critical-css">:root{--bg-color:#F8F6F0;--white:#FFFFFF;--primary-light:#B4DBBC;--primary:#8BCB9B;--primary-hover:#72B884;--primary-dark:#3F7053;--brown-light:#8A6B52;--brown-main:#5C4033;--brown-dark:#3E2723;--text-main:#3E2723;--text-light:#6A5B53;--accent:#F0EBE1;--font-main:'Poppins',sans-serif;--shadow-sm:0 4px 6px -1px rgba(92, 64, 51, 0.05),0 2px 4px -1px rgba(92, 64, 51, 0.03);--shadow-md:0 10px 15px -3px rgba(92, 64, 51, 0.08),0 4px 6px -2px rgba(92, 64, 51, 0.04);--shadow-lg:0 20px 25px -5px rgba(92, 64, 51, 0.1),0 10px 10px -5px rgba(92, 64, 51, 0.06);--shadow-glow:0 4px 25px rgba(139, 203, 155, 0.4);--radius-sm:12px;--radius-md:20px;--radius-lg:32px;--radius-full:9999px;--transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1)}body{font-family:var(--font-main);background-color:var(--bg-color);color:var(--text-main);line-height:1.6;overflow-x:hidden}.container{width:100%;max-width:1140px;margin:0 auto;padding:0 24px}h1,h2,h3,h4,h5,h6{color:var(--brown-main);line-height:1.2;font-weight:700}.cta-button{display:inline-flex;align-items:center;justify-content:center;gap:.75rem;background-color:var(--primary);color:var(--brown-dark);font-weight:700;font-size:1.125rem;padding:1.1rem 2.5rem;border-radius:var(--radius-full);text-decoration:none;transition:var(--transition);border:2px solid transparent;box-shadow:var(--shadow-glow);cursor:pointer;text-transform:uppercase;letter-spacing:.5px;line-height:1}.cta-button i{display:flex;align-items:center}.cta-button:hover{background-color:var(--primary-hover);transform:translateY(-3px);box-shadow:0 8px 30px rgba(139,203,155,.6)}.pulse{animation:pulse-anim 1.5s infinite cubic-bezier(.66,0,0,1)}pulse-anim{transform:scale(1)}.top-banner{width:100%}.top-banner img{width:100%;height:auto;display:block;object-fit:cover}.hero{padding:6rem 0 8rem;background:linear-gradient(135deg,var(--accent) 0,var(--bg-color) 100%);overflow:hidden;position:relative;text-align:center}.hero::after{content:'';position:absolute;top:-50%;right:-20%;width:800px;height:800px;background:radial-gradient(circle,rgba(139,203,155,.15) 0,transparent 70%);border-radius:50%;z-index:0}.hero-container{max-width:800px;margin:0 auto;display:flex;flex-direction:column;align-items:center;position:relative;z-index:1}.hero-bullets{display:inline-flex;flex-direction:column;align-items:flex-start;text-align:left;margin-bottom:2.5rem}.badge{display:inline-block;background-color:var(--white);color:var(--brown-main);padding:.5rem 1.25rem;border-radius:var(--radius-full);font-size:.875rem;font-weight:600;margin-bottom:1.5rem;box-shadow:var(--shadow-sm);border:1px solid rgba(92,64,51,.08)}.headline{font-size:3.2rem;font-weight:800;margin-bottom:1.25rem;letter-spacing:-.5px}.subheadline{font-size:1.2rem;color:var(--text-light);margin-bottom:2rem;max-width:90%}.hero-bullets{list-style:none;margin-bottom:2.5rem}.hero-bullets li{display:flex;align-items:center;gap:.75rem;font-size:1.05rem;margin-bottom:1rem;font-weight:500}-badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background-color:var(--primary);width:45px;height:45px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(139,203,155,.4);z-index:2;border:3px solid var(--white)}-badge svg{width:24px;height:24px;stroke-width:3}-container{display:flex;flex-direction:column;gap:1rem}-container{flex:1;position:relative;overflow:hidden;background-color:var(--bg-color)}.headline{font-size:2.8rem}.hero-container{gap:2rem}.hero{padding:4rem 0;overflow:hidden}.hero-container{grid-template-columns:1fr;text-align:center;gap:2.5rem;display:flex;flex-direction:column}.headline{font-size:2.2rem}.subheadline{max-width:100%;font-size:1.1rem}.hero-bullets{display:inline-flex;flex-direction:column;align-items:flex-start;text-align:left}.hero-bullets li{font-size:1rem}.cta-button{width:100%;max-width:320px;font-size:1.05rem;padding:1rem 1.5rem}.headline{font-size:1.8rem}.cta-button{padding:.8rem 1.2rem;font-size:1rem}</style>
 </head>
 
 <body>
-    <div class="top-banner">
-        <img src="img/toposite-1200.webp"
-            srcset="img/toposite-400.webp 400w, img/toposite-800.webp 800w, img/toposite-1200.webp 1200w"
-            sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px" alt="Aviso Especial" width="1200"
-            height="342" fetchpriority="high" loading="eager">
-    </div>
+
 
     <header class="hero" id="inicio">
         <div class="container hero-container">
             <div class="hero-content fade-in">
-                <div class="badge">E-book Digital + Checklist</div>
-                <h1 class="headline">Transforme a Páscoa em renda com <span class="highlight">Ovos Gourmet de
-                        Pistache</span></h1>
-                <p class="subheadline">Guia simples pra começar do zero, precificar com margem e vender pelo
-                    Instagram/WhatsApp.</p>
+                <div class="badge">Material Prático</div>
+                <h1 class="headline-creative"><span class="highlight-premium-pistache">OVOS DE PISTACHE</span><br>que
+                    vendem em até <span class="highlight-price">R$150</span></h1>
+
+                <div class="hero-image-wrapper">
+                    <img src="img/ovosDePistache/ovos-pascoa-pistache-brasil-cacau.webp" alt="Ovos de Pistache Gourmet"
+                        class="hero-main-img" width="600" height="400">
+                </div>
+
+                <p class="subheadline">Mesmo começando do zero...</p>
                 <ul class="hero-bullets">
-                    <li><i data-lucide="check-circle" class="icon-green"></i> Comece do absoluto zero</li>
-                    <li><i data-lucide="check-circle" class="icon-green"></i> Crie um produto premium</li>
+                    <li><i data-lucide="check-circle" class="icon-green"></i> Como precificar e vender na Páscoa</li>
+                    <li><i data-lucide="check-circle" class="icon-green"></i> Receita dos recheios de pistache</li>
                     <li><i data-lucide="check-circle" class="icon-green"></i> Estratégias de venda rápida</li>
                 </ul>
                 <div class="cta-wrapper">
-                    <a href="#oferta" class="cta-button pulse">Quero meu e-book agora <i
-                            data-lucide="arrow-right"></i></a>
+                    <a href="#oferta" class="cta-button pulse">Quero pra já <i data-lucide="arrow-right"></i></a>
                     <p class="safe-checkout"><i data-lucide="lock"></i> Compra segura | Acesso imediato</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Sobre o E-book (Nova Seção) -->
-    <section class="about-ebook section-padding bg-white" id="sobre">
-        <div class="container fade-in">
-            <div class="grid-2 align-center">
-                <div class="about-image-wrapper">
-                    <img src="img/cozinhando.webp" alt="Confeiteira cozinhando receitas de pistache" class="about-img"
-                        width="1024" height="1024" loading="lazy">
+
+
+    <!-- Urgency countdown section (Páscoa) -->
+    <!-- Urgency countdown section (Páscoa) -->
+    <section class="urgency-section" id="urgencia">
+        <div class="container fade-in text-center">
+            <div class="urgency-wrapper">
+                <span class="urgency-badge-alert"><i data-lucide="bell"></i> Lembrete</span>
+                <h2 class="urgency-title-simple">Faltam <span id="days-count" class="highlight-primary">--</span> dias
+                    para a Páscoa</h2>
+                <p class="urgency-subtitle">A época mais lucrativa do ano para confeiteiras!</p>
+
+                <div class="urgency-countdown-centered mt-8 mb-8">
+                    <div class="countdown-timer" id="pascoa-countdown">
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Dias</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Hrs</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Min</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Seg</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-content">
-                    <h2 class="section-title">Impulsione Seu Negócio com o guia definitivo de Ovos
-                        de Pistache Gourmet!</h2>
 
-                    <p class="about-text mb-4">
-                        O e-book <strong>Ovos Gourmet de Pistache</strong> foi criado para ensinar, de forma
-                        <span style="color:#2e7d32; font-weight:600;">simples e prática</span>,
-                        como produzir ovos artesanais de
-                        <span style="color:#2e7d32; font-weight:600;">alto valor</span>
-                        que impressionam no sabor e na apresentação.
-                    </p>
+                <div class="urgency-reading-time">
+                    <i data-lucide="clock"></i>
+                    <span>Preparamos o conteúdo para ser lido e aplicado em apenas <br><strong>1 hora</strong></span>
+                </div>
 
-                    <p class="about-text mb-4">
-                        Você aprenderá desde a
-                        <span style="color:#2e7d32; font-weight:600;">escolha dos ingredientes</span>
-                        até as
-                        <span style="color:#2e7d32; font-weight:600;">técnicas de montagem e finalização</span>,
-                        transformando o pistache na
-                        <span style="color:#2e7d32; font-weight:600;">maior tendência da confeitaria</span>.
-                    </p>
-
-                    <p class="about-text mb-8">
-                        Além das receitas, o material também ensina
-                        <span style="color:#2e7d32; font-weight:600;">precificação</span>,
-                        <span style="color:#2e7d32; font-weight:600;">padronização</span> e
-                        <span style="color:#2e7d32; font-weight:600;">estratégias de vendas</span>,
-                        para que você transforme seus ovos gourmet em uma
-                        <span style="color:#2e7d32; font-weight:600;">nova fonte de renda</span>.
-                    </p>
-                    <a href="#oferta" class="cta-button pulse">ACESSAR AGORA <i data-lucide="arrow-right"></i></a>
+                <div class="cta-wrapper mt-10">
+                    <a href="#oferta" class="cta-button pulse">Garantir agora <i data-lucide="arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Vantagens -->
-    <section class="advantages-section section-padding bg-accent" id="vantagens">
-        <div class="container fade-in">
-            <h2 class="section-title text-center mb-12">Conheça todas as <span style="color:var(--primary);">vantagens
-                    do nosso e-book</span><br> de Ovos Gourmet de Pistache</h2>
-
-            <div class="grid-3 mt-12 text-center">
-                <!-- Vantagem 1 -->
-                <div class="advantage-card">
-                    <div class="advantage-img-wrapper">
-                        <div class="check-badge">
-                            <i data-lucide="check" class="text-white"></i>
-                        </div>
-                        <img src="img/ovosDePistache/pistache1.webp" alt="Ovos de Pistache de alta qualidade"
-                            class="advantage-img" width="800" height="547" loading="lazy">
-                    </div>
-                    <h3 class="advantage-title">Aprendizado Completo</h3>
-                    <p class="advantage-text">
-                        Domine a escolha dos ingredientes e as técnicas de finalização. Com um passo a passo detalhado,
-                        você aprenderá a criar ovos finos, irresistíveis e profissionais que impressionam a todos nessa
-                        Páscoa.
-                    </p>
-                </div>
-
-                <!-- Vantagem 2 -->
-                <div class="advantage-card">
-                    <div class="advantage-img-wrapper">
-                        <div class="check-badge">
-                            <i data-lucide="check" class="text-white"></i>
-                        </div>
-                        <img src="img/ovosDePistache/pistache2.webp" alt="Aumento de vendas de ovos gourmet"
-                            class="advantage-img" width="800" height="1029" loading="lazy">
-                    </div>
-                    <h3 class="advantage-title">Aumente Suas Vendas</h3>
-                    <p class="advantage-text">
-                        Com dicas sobre precificação, padronização e vendas pelas redes sociais, você otimizará sua
-                        produção e criará produtos de alta margem que encantam seus clientes, elevando seu faturamento.
-                    </p>
-                </div>
-
-                <!-- Vantagem 3 -->
-                <div class="advantage-card">
-                    <div class="advantage-img-wrapper">
-                        <div class="check-badge">
-                            <i data-lucide="check" class="text-white"></i>
-                        </div>
-                        <img src="img/ovosDePistache/pistache3.webp" alt="Estudo flexível para confeiteiras"
-                            class="advantage-img" width="800" height="1029" loading="lazy">
-                    </div>
-                    <h3 class="advantage-title">Flexibilidade e Conforto</h3>
-                    <p class="advantage-text">
-                        O e-book é 100% digital, permitindo acesso imediato ao conteúdo. Aprenda no seu ritmo e de
-                        qualquer lugar, sem comprometer sua rotina e aproveitando a conveniência de ler no celular,
-                        tablet ou imprimir.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimentos Mobile Slider -->
     <section class="section testimonials mt-12 mb-12" style="background: transparent;">
         <div class="container" style="display: flex; justify-content: center; padding: 40px 10px;">
 
@@ -571,31 +513,103 @@
         </div>
     </section>
 
-    <section class="target-audience section-padding" id="para-quem">
+
+    <section class="what-you-learn section-padding bg-white" id="conteudo">
         <div class="container fade-in">
-            <h2 class="section-title text-center">Para quem é este e-book?</h2>
-            <div class="grid-4 mt-12">
-                <div class="card card-hover">
-                    <div class="card-icon"><i data-lucide="sparkles"></i></div>
-                    <h3>Iniciantes absolutos</h3>
-                    <p>Você nunca mexeu com doces antes? Este guia te ensina o básico com um passo a passo prático.</p>
+            <div class="text-center mb-12">
+                <h2 class="section-title">Exatamente o que você vai aprender na prática:</h2>
+                <p class="section-subtitle">Sem aulas gigantes e teorias chatas. O passo a passo mastigado para você
+                    lucrar rápido.</p>
+            </div>
+
+            <div class="learn-cards-container mx-auto"
+                style="max-width: 800px; display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2.5rem;">
+
+                <!-- Tópico 1 -->
+                <div class="glass-panel"
+                    style="padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; background: var(--bg-color); border: 1px solid rgba(92,64,51,0.05); transition: transform 0.3s ease;">
+                    <div class="list-icon"
+                        style="flex-shrink: 0; background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); color: var(--primary-dark);">
+                        <i data-lucide="shopping-cart"></i>
+                    </div>
+                    <div>
+                        <h4
+                            style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brown-dark);">
+                            O que comprar</h4>
+                        <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">A lista exata de
+                            ingredientes e utensílios baratos para você investir apenas no que realmente dá retorno.</p>
+                    </div>
                 </div>
-                <div class="card card-hover">
-                    <div class="card-icon"><i data-lucide="chef-hat"></i></div>
-                    <h3>Confeiteiras</h3>
-                    <p>Quer elevar o padrão do seu menu e se destacar com um produto premium para clientes de alto
-                        valor.</p>
+
+                <!-- Tópico 2 -->
+                <div class="glass-panel"
+                    style="padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; background: var(--bg-color); border: 1px solid rgba(92,64,51,0.05); transition: transform 0.3s ease;">
+                    <div class="list-icon"
+                        style="flex-shrink: 0; background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); color: var(--primary-dark);">
+                        <i data-lucide="cookie"></i>
+                    </div>
+                    <div>
+                        <h4
+                            style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brown-dark);">
+                            Cascas e Recheios Perfeitos</h4>
+                        <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Do derretimento correto do
+                            chocolate ao ponto cremoso do ganache de pistache, tudo passo a passo.</p>
+                    </div>
                 </div>
-                <div class="card card-hover">
-                    <div class="card-icon"><i data-lucide="wallet"></i></div>
-                    <h3>Renda Extra</h3>
-                    <p>Busca uma fonte sólida de lucro rápido aproveitando a melhor época do ano para faturar.</p>
+
+                <!-- Tópico 3 -->
+                <div class="glass-panel"
+                    style="padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; background: var(--bg-color); border: 1px solid rgba(92,64,51,0.05); transition: transform 0.3s ease;">
+                    <div class="list-icon"
+                        style="flex-shrink: 0; background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); color: var(--primary-dark);">
+                        <i data-lucide="layout-list"></i>
+                    </div>
+                    <div>
+                        <h4
+                            style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brown-dark);">
+                            Organização Prática</h4>
+                        <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Como produzir dezenas de
+                            ovos em menos tempo na mesa da sua cozinha, sem desespero ou bagunça.</p>
+                    </div>
                 </div>
-                <div class="card card-hover">
-                    <div class="card-icon"><i data-lucide="star"></i></div>
-                    <h3>Diferenciação</h3>
-                    <p>Para quem quer fugir do óbvio e oferecer uma novidade inesquecível que esgota rápido.</p>
+
+                <!-- Tópico 4 -->
+                <div class="glass-panel"
+                    style="padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; background: var(--bg-color); border: 1px solid rgba(92,64,51,0.05); transition: transform 0.3s ease;">
+                    <div class="list-icon"
+                        style="flex-shrink: 0; background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); color: var(--primary-dark);">
+                        <i data-lucide="calculator"></i>
+                    </div>
+                    <div>
+                        <h4
+                            style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brown-dark);">
+                            Precificação</h4>
+                        <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Saiba o custo exato do seu
+                            ovo e coloque um valor que pague seu trabalho e ainda te deixe muito dinheiro no bolso.</p>
+                    </div>
                 </div>
+
+                <!-- Tópico 5 -->
+                <div class="glass-panel"
+                    style="padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; background: var(--bg-color); border: 1px solid rgba(92,64,51,0.05); transition: transform 0.3s ease;">
+                    <div class="list-icon"
+                        style="flex-shrink: 0; background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); color: var(--primary-dark);">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <div>
+                        <h4
+                            style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brown-dark);">
+                            Vendas Rápidas Pelo Instagram e WhatsApp</h4>
+                        <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Scripts de abordagem e dicas
+                            de foto para fazer as pessoas babarem pelos seus ovos e comprarem no primeiro stories.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="#oferta" class="cta-button pulse cta-large">QUERO APRENDER TUDO ISSO <i
+                        data-lucide="arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -603,7 +617,7 @@
     <section class="why-pistachio section-padding relative">
         <div class="container fade-in">
             <div class="text-center mb-12">
-                <h2 class="section-title">Por que o Pistache vende?</h2>
+                <h2 class="section-title">Por que ovos de pistache chamam tanta atenção?</h2>
                 <p class="section-subtitle">O ingrediente que revolucionou a confeitaria gourmet.</p>
             </div>
             <div class="grid-3 mt-12">
@@ -631,7 +645,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-img-wrapper">
-                        <img src="img/ovosDePistache/pistache6.webp" alt="Novidade Desejada" class="feature-photo"
+                        <img src="img/ovosDePistache/ovoCaixa.jpg" alt="Novidade Desejada" class="feature-photo"
                             width="800" height="547" loading="lazy">
                     </div>
                     <div class="feature-content">
@@ -648,166 +662,172 @@
         </div>
     </section>
 
-    <section class="what-you-learn section-padding bg-white" id="conteudo">
-        <div class="container fade-in">
-            <div class="grid-2 align-center">
-                <div class="learn-content">
-                    <h2 class="section-title">O que você vai aprender</h2>
-                    <p class="learn-text mb-8">Conteúdo direto ao ponto e sem enrolação, pensado na sua agilidade e nos
-                        seus lucros.</p>
-                    <ul class="learn-list">
-                        <li>
-                            <div class="list-icon"><i data-lucide="shopping-basket"></i></div>
-                            <div class="list-text">
-                                <h4>Ingredientes e Utensílios</h4>
-                                <p>O que você realmente precisa comprar, com foco em economizar logo de início.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-icon"><i data-lucide="refresh-cw"></i></div>
-                            <div class="list-text">
-                                <h4>Processo Simplificado</h4>
-                                <p>Aprenda de forma fácil as etapas exatas de preparação para garantir o ovo perfeito.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="list-icon"><i data-lucide="calendar-check"></i></div>
-                            <div class="list-text">
-                                <h4>Planejamento Correto</h4>
-                                <p>Organize sua produção para evitar correria de última hora e manter a qualidade.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
 
-                <div class="recipes-box glass-panel">
-                    <h3 class="recipes-title text-center mb-6">5 Variações Exclusivas de Ovos</h3>
-                    <div class="recipe-grid">
-                        <div class="recipe-item">
-                            <i data-lucide="check" class="text-primary"></i> Casca Clássica de Pistache
-                        </div>
-                        <div class="recipe-item">
-                            <i data-lucide="check" class="text-primary"></i> Casca Meio Amargo com Pistache
-                        </div>
-                        <div class="recipe-item">
-                            <i data-lucide="check" class="text-primary"></i> Ovo Trufado Sensação Pistache
-                        </div>
-                        <div class="recipe-item">
-                            <i data-lucide="check" class="text-primary"></i> Ovo Crocante Premium Pistache
-                        </div>
-                        <div class="recipe-item">
-                            <i data-lucide="check" class="text-primary"></i> Linha Fit e Sem Açúcar
-                        </div>
-                    </div>
+
+    <section class="target-audience section-padding" id="para-quem">
+        <div class="container fade-in">
+            <h2 class="section-title text-center">Para quem é este e-book?</h2>
+            <div class="grid-4 mt-12">
+                <div class="card card-hover">
+                    <div class="card-icon"><i data-lucide="sparkles"></i></div>
+                    <h3>Iniciantes absolutos</h3>
+                    <p>Você nunca mexeu com doces antes? Este guia te ensina o básico com um passo a passo prático.</p>
                 </div>
+                <div class="card card-hover">
+                    <div class="card-icon"><i data-lucide="chef-hat"></i></div>
+                    <h3>Confeiteiras</h3>
+                    <p>Quer elevar o padrão do seu menu e se destacar com um produto premium para clientes de alto
+                        valor.</p>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon"><i data-lucide="wallet"></i></div>
+                    <h3>Renda Extra</h3>
+                    <p>Busca uma fonte sólida de lucro rápido aproveitando a melhor época do ano para faturar.</p>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon"><i data-lucide="star"></i></div>
+                    <h3>Diferenciação</h3>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#oferta" class="cta-button pulse">QUERO COMEÇAR AGORA <i data-lucide="arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <section class="business-section section-padding">
-        <div class="container fade-in">
-            <div class="text-center mb-12">
-                <h2 class="section-title">Embalagem e Vendas</h2>
+    <!-- Raciocínio Financeiro -->
+    <section class="financial-reasoning section-padding" id="raciocinio"
+        style="background: linear-gradient(135deg, var(--bg-color) 0%, #fffefe 100%);">
+        <div class="container fade-in text-center">
+
+            <div class="badge mb-6"
+                style="background: #FFD700; color: var(--brown-dark); border: none; box-shadow: var(--shadow-md);"><i
+                    data-lucide="trending-up"></i> Retorno Garantido</div>
+            <h2 class="section-title mb-12 mx-auto"
+                style="font-size: 2.8rem; letter-spacing: -1px; max-width: 800px; line-height: 1.1;">Venda 1 ovo, pague
+                o e-book e <span class="highlight">fique com o lucro livre.</span></h2>
+
+            <div class="math-showcase mx-auto" style="max-width: 900px; position: relative;">
+                <div class="math-container">
+
+                    <!-- Box Investimento -->
+                    <div class="math-box investment-box">
+                        <span class="math-label">O e-book custa hoje:</span>
+                        <div
+                            style="display: flex; gap: 12px; justify-content: center; align-items: baseline; margin-top: 15px;">
+                            <span class="math-price"
+                                style="color: var(--text-light); text-decoration: line-through; font-size: 1.4rem; opacity: 0.6;">R$
+                                97</span>
+                            <span class="math-price text-primary" style="font-size: 4rem;">R$ 17</span>
+                        </div>
+                    </div>
+
+                    <!-- Operador -->
+                    <div class="math-operator">
+                        <i data-lucide="arrow-right"></i>
+                    </div>
+
+                    <!-- Box Venda -->
+                    <div class="math-box return-box"
+                        style="background: var(--primary); border: 2px solid var(--primary-hover);">
+                        <span class="math-label text-white" style="opacity: 0.9;">1 Ovo de Colher vende por:</span>
+                        <span class="math-price text-white"
+                            style="font-size: 4.5rem; text-shadow: 0 4px 15px rgba(0,0,0,0.15); margin-top: 8px;">R$
+                            150</span>
+                        <div class="lucro-badge">+ R$ 133 de Lucro Imediato</div>
+                    </div>
+
+                </div>
             </div>
-            <div class="grid-2 gap-8">
-                <div class="info-card">
-                    <div class="info-header">
-                        <div class="info-icon"><i data-lucide="calculator"></i></div>
-                        <h3>Embalagem e Precificação</h3>
-                    </div>
-                    <div class="info-body">
-                        <p class="mb-4">Aprenda a tratar seu ovo como uma verdeira <strong>joia de confeitaria</strong>.
-                            Aumente o valor percebido sem medo de cobrar.</p>
-                        <ul class="custom-bullets">
-                            <li>Precifique mantendo uma alta margem de lucro.</li>
-                            <li>Posicionamento premium que justifica seu preço.</li>
-                            <li>Técnicas de apresentação e embalagem inesquecível.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <div class="info-header">
-                        <div class="info-icon"><i data-lucide="smartphone"></i></div>
-                        <h3>Vendas: Insta e Whats</h3>
-                    </div>
-                    <div class="info-body">
-                        <p class="mb-4">Transforme seus seguidores e contatos e potenciais clientes aplicando práticas
-                            que simplificam a venda.</p>
-                        <ul class="custom-bullets">
-                            <li>Checklist prático de vendas garantidas.</li>
-                            <li>Dicas de atendimento focado em conversão.</li>
-                            <li>Aprenda como tirar fotos que dão na água na boca.</li>
-                        </ul>
-                    </div>
-                </div>
+
+            <p class="fin-message mx-auto"
+                style="font-size: 1.1rem; color: var(--text-light); max-width: 600px; margin-top: 3.5rem; line-height: 1.6;">
+                O risco é praticamente zero. Com apenas <strong>uma única encomenda</strong> você já recupera os R$ 17
+                do e-book e ainda fecha com lucro.
+            </p>
+
+            <div class="cta-wrapper mt-8">
+                <a href="#oferta" class="cta-button cta-large pulse">QUERO LUCRAR NESSA PÁSCOA <i
+                        data-lucide="arrow-right"></i></a>
             </div>
         </div>
     </section>
+
+
 
     <section class="offer-section section-padding text-center" id="oferta">
         <div class="container fade-in">
-            <div class="offer-box" style="max-width: 650px;">
-                <h2 class="section-title text-white mb-6" style="font-size: 1.8rem;">Garantir seu pacote completo:</h2>
+            <div class="offer-box premium-offer-box" style="max-width: 700px; padding-top: 3.5rem;">
+                
+                <div class="easter-badge">
+                    <i data-lucide="gift" style="width: 16px; height: 16px;"></i>
+                    <span>OFERTA ESPECIAL PRÉ-PÁSCOA</span>
+                </div>
 
-                <!-- Card de Preço Centralizado -->
-                <div class="pricing-card mb-8">
-                    <span class="old-price">De R$ 97,00 por apenas</span>
-                    <div class="current-price">
+                <h2 class="section-title text-white mb-2" style="font-size: 2.2rem; font-weight: 800; line-height: 1.1;">OPORTUNIDADE ÚNICA</h2>
+           
+
+                <!-- Premium Pricing Card -->
+                <div class="pricing-card premium-pricing-card mb-8 text-center" style="max-width: 480px; margin-left: auto; margin-right: auto;">
+                    
+                    <div class="discount-tag">82%<span>OFF</span></div>
+                    
+                    <span class="old-price" style="font-size: 1.15rem;">De R$ 97,00 por apenas</span>
+                    <div class="current-price premium-price mt-2 mb-2">
                         <span class="currency">R$</span>
                         <span class="value">17</span>
                         <span class="cents">,00</span>
                     </div>
-                    <span class="installment-price">ou 3x de R$6,45</span>
+                    <span class="installment-price text-primary mb-6" style="font-size: 1.25rem; font-weight: 700;">ou 3x de R$ 6,45</span>
 
-                    <a href="https://pay.cakto.com.br/3a57fh5_793560" class="cta-button primary pulse mx-auto"
-                        style="width: 100%;">
-                        ACESSAR TUDO AGORA <i data-lucide="arrow-right"></i>
+                    <a href="https://pay.cakto.com.br/3a57fh5_793560" class="cta-button premium-cta pulse mx-auto w-full"
+                        style="width: 100%; display: flex;">
+                        QUERO ACESSAR TUDO AGORA <i data-lucide="arrow-right"></i>
                     </a>
-                    <p class="text-sm mt-4 flex-center"
-                        style="color: var(--text-light); opacity: 0.7; gap: 0.5rem; white-space: nowrap;">
-                        <i data-lucide="lock" style="width: 14px; height: 14px; flex-shrink: 0;"></i> Pagamento 100%
-                        Seguro
-                    </p>
+                    
+                    <div class="flex-center mt-4 text-sm" style="color: var(--text-light); gap: 0.5rem; opacity: 0.9; font-weight: 500;">
+                        <i data-lucide="lock" style="width: 16px; height: 16px; color: #27AE60;"></i> Pagamento 100% Seguro
+                    </div>
                 </div>
 
-                <!-- Lista de Itens Compacta -->
-                <div class="bundle-list" style="text-align: left; max-width: 420px; margin: 0 auto;">
+                <!-- Lista de Itens Compacta Premium -->
+                <div class="bundle-list premium-bundle-list" style="text-align: left; max-width: 480px; margin: 0 auto;">
+                    <h4 class="text-white mb-4 text-center" style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-light);">Tudo que está incluso:</h4>
                     <div class="bundle-item">
                         <i data-lucide="book-open"></i>
                         <div>
                             <h4>E-book Pistache Gourmet</h4>
-                            <p>Receitas e técnicas passo a passo.</p>
+                            <p style="opacity: 0.9;">Receitas e técnicas premium passo a passo.</p>
                         </div>
                     </div>
                     <div class="bundle-item">
                         <i data-lucide="check-square"></i>
                         <div>
                             <h4>Checklist de Materiais</h4>
-                            <p>Lista do que comprar sem desperdícios.</p>
+                            <p style="opacity: 0.9;">Lista exata do que comprar sem nenhum desperdício.</p>
                         </div>
                     </div>
                     <div class="bundle-item">
                         <i data-lucide="trending-up"></i>
                         <div>
                             <h4>Guia de Precificação</h4>
-                            <p>Aprenda a cobrar justo e ter lucro.</p>
+                            <p style="opacity: 0.9;">Aprenda a cobrar justo e ter alta margem de lucro.</p>
                         </div>
                     </div>
                     <div class="bundle-item">
                         <i data-lucide="instagram"></i>
                         <div>
-                            <h4>Estratégia de Vendas</h4>
-                            <p>Atraia clientes pelo Insta e WhatsApp.</p>
+                            <h4>Top Estratégias de Venda</h4>
+                            <p style="opacity: 0.9;">Como atrair clientes pelo Instagram e WhatsApp.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="guarantee-box mt-8">
-                    <i data-lucide="shield-check" class="guarantee-icon" style="width: 48px; height: 48px;"></i>
-                    <div>
-                        <h4 class="text-white" style="font-size: 1rem;">Garantia de 7 Dias</h4>
-                        <p class="text-white text-sm opacity-80">Satisfação ou seu dinheiro de volta.</p>
+                <div class="guarantee-box mt-8" style="background: rgba(139, 203, 155, 0.1); padding: 1.5rem 2rem; border-radius: var(--radius-md); border: 1px solid rgba(139, 203, 155, 0.3); display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center;">
+                    <i data-lucide="shield-check" class="guarantee-icon pulse" style="width: 48px; height: 48px; color: var(--primary-light); margin-bottom: 1rem; display: block;"></i>
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <h4 class="text-white" style="font-size: 1.15rem; margin-bottom: 8px; text-align: center;">Garantia Incondicional de 7 Dias</h4>
+                        <p class="text-white text-sm opacity-80" style="margin: 0; line-height: 1.5; text-align: center; max-width: 450px;">Satisfação total garantida. Se não gostar, devolvemos 100% do seu dinheiro. Risco zero para você.</p>
                     </div>
                 </div>
             </div>
@@ -859,6 +879,7 @@
                     </div>
                 </details>
             </div>
+
         </div>
     </section>
 
@@ -876,6 +897,58 @@
     </footer>
 
     <script src="script.js" defer></script>
+    <script>
+        // Configuração do Contador Regressivo da Páscoa
+        document.addEventListener('DOMContentLoaded', function () {
+            // Define a data alvo para a Páscoa (Pode ser ajustada conforme necessário)
+            // Exemplo: 5 de Abril de 2026, às 23:59:59
+            const targetDate = new Date('2026-04-05T23:59:59').getTime();
+
+            // Elementos do DOM
+            const daysCountEl = document.getElementById('days-count');
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const difference = targetDate - now;
+
+                if (difference <= 0) {
+                    // Se o contador chegar a zero
+                    if (daysCountEl) daysCountEl.innerText = "0";
+                    daysEl.innerText = "00";
+                    hoursEl.innerText = "00";
+                    minutesEl.innerText = "00";
+                    secondsEl.innerText = "00";
+                    const titleEl = document.querySelector('.urgency-title-simple');
+                    if (titleEl) titleEl.innerText = "A Páscoa chegou!";
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                // Atualiza o título dinâmico
+                if (daysCountEl) daysCountEl.innerText = days;
+
+                // Adiciona zero à esquerda se for menor que 10
+                daysEl.innerText = days < 10 ? '0' + days : days;
+                hoursEl.innerText = hours < 10 ? '0' + hours : hours;
+                minutesEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+                secondsEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+            }
+
+            // Inicia o contador e atualiza a cada segundo
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        });
+    </script>
 </body>
 
 </html>
