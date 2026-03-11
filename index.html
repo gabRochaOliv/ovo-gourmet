@@ -11,9 +11,14 @@
 
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://pay.cakto.com.br">
+    
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <link rel="preload" href="style.css?v=2" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -39,7 +44,7 @@
 
     <noscript>
         <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1555382172213844&ev=PageView&noscript=1" />
+            src="https://www.facebook.com/tr?id=1555382172213844&ev=PageView&noscript=1" alt="fb-pixel"/>
     </noscript>
     <!-- End Meta Pixel Code -->
 
@@ -338,7 +343,7 @@
 
                 <div class="hero-image-wrapper">
                     <img src="img/ovosDePistache/ovos-pascoa-pistache-brasil-cacau.webp" alt="Ovos de Pistache Gourmet"
-                        class="hero-main-img" width="600" height="400">
+                        class="hero-main-img" width="600" height="400" fetchpriority="high">
                 </div>
 
                 <p class="subheadline">Mesmo começando do zero...</p>
@@ -445,8 +450,8 @@
                             <p class="test-quote">"A base que o e-book ensina é perfeita, muito prático. Meus clientes
                                 amam o Ovo de Pistache Cocrante aqui. "</p>
                             <div class="test-user">
-                                <img src="img/pessoas/pessoaA.webp" alt="Ana Maria C." class="user-img" width="728"
-                                    height="971" loading="lazy">
+                                <img src="img/pessoas/pessoaA.webp" alt="Ana Maria C." class="user-img" width="60"
+                                    height="60" loading="lazy">
                                 <div class="user-meta">
                                     <h5 class="user-name">ANA MARIA C.</h5>
                                     <span class="user-loc">RECIFE, PE</span>
@@ -459,8 +464,8 @@
                             <p class="test-quote">"Comecei testando com pouco dinheiro. Hoje já consigo
                                 ajudar em casa vendendo esses ovos premium ❤️"</p>
                             <div class="test-user">
-                                <img src="img/pessoas/pessoaB.webp" alt="Luciana M." class="user-img" width="800"
-                                    height="1065" loading="lazy">
+                                <img src="img/pessoas/pessoaB.webp" alt="Luciana M." class="user-img" width="60"
+                                    height="60" loading="lazy">
                                 <div class="user-meta">
                                     <h5 class="user-name">LUCIANA M.</h5>
                                     <span class="user-loc">BELO HORIZONTE, MG</span>
@@ -474,8 +479,8 @@
                                 Super
                                 recomendo a todas! "</p>
                             <div class="test-user">
-                                <img src="img/pessoas/pessoaC.webp" alt="Julia R." class="user-img" width="474"
-                                    height="632" loading="lazy">
+                                <img src="img/pessoas/pessoaC.webp" alt="Julia R." class="user-img" width="60"
+                                    height="60" loading="lazy">
                                 <div class="user-meta">
                                     <h5 class="user-name">JULIA R.</h5>
                                     <span class="user-loc">CURITIBA, PR</span>
@@ -624,7 +629,7 @@
                 <div class="feature-card">
                     <div class="feature-img-wrapper">
                         <img src="img/ovosDePistache/pistache4.webp" alt="Ovos Puro Luxo" class="feature-photo"
-                            width="800" height="547" loading="lazy">
+                            width="350" height="240" loading="lazy">
                     </div>
                     <div class="feature-content">
                         <h3>Puro Luxo</h3>
@@ -635,7 +640,7 @@
                 <div class="feature-card">
                     <div class="feature-img-wrapper">
                         <img src="img/ovosDePistache/pistache5.webp" alt="Alto Valor Percebido" class="feature-photo"
-                            width="800" height="1029" loading="lazy">
+                            width="350" height="240" loading="lazy">
                     </div>
                     <div class="feature-content">
                         <h3>Alto Valor Percebido</h3>
@@ -646,7 +651,7 @@
                 <div class="feature-card">
                     <div class="feature-img-wrapper">
                         <img src="img/ovosDePistache/ovoCaixa.jpg" alt="Novidade Desejada" class="feature-photo"
-                            width="800" height="547" loading="lazy">
+                            width="350" height="240" loading="lazy">
                     </div>
                     <div class="feature-content">
                         <h3>Novidade Desejada</h3>
@@ -896,6 +901,7 @@
         </div>
     </footer>
 
+    <!-- Scripts deferidos -->
     <script src="script.js" defer></script>
     <script>
         // Configuração do Contador Regressivo da Páscoa
