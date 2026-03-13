@@ -7,17 +7,22 @@
     <title>Pistache: Ovos Gourmet</title>
     <meta name="description"
         content="Guia simples pra começar do zero, precificar com margem e vender pelo Instagram e WhatsApp.">
-
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/iconeSite.png">
 
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://pay.cakto.com.br">
-    
+
     <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <link rel="preload" href="style.css?v=2" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -44,7 +49,7 @@
 
     <noscript>
         <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1555382172213844&ev=PageView&noscript=1" alt="fb-pixel"/>
+            src="https://www.facebook.com/tr?id=1555382172213844&ev=PageView&noscript=1" alt="fb-pixel" />
     </noscript>
     <!-- End Meta Pixel Code -->
 
@@ -209,11 +214,12 @@
 
         /* Premium Offer Styles */
         .premium-offer-box {
-            background: linear-gradient(145deg, rgba(62,39,35,0.95) 0%, rgba(92,64,51,0.9) 100%);
-            border: 2px solid rgba(255,215,0,0.3);
-            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.7), 0 0 40px rgba(255,215,0,0.1);
+            background: linear-gradient(145deg, rgba(62, 39, 35, 0.95) 0%, rgba(92, 64, 51, 0.9) 100%);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px rgba(255, 215, 0, 0.1);
             position: relative;
         }
+
         .easter-badge {
             position: absolute !important;
             top: -20px !important;
@@ -232,21 +238,23 @@
             align-items: center !important;
             justify-content: center !important;
             gap: 8px !important;
-            box-shadow: 0 10px 20px rgba(255,215,0,0.4) !important;
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.4) !important;
             white-space: nowrap !important;
             z-index: 999 !important;
             border: 2px solid var(--white) !important;
-            animation: pulse-anim 2s infinite cubic-bezier(.66,0,0,1) !important;
+            animation: pulse-anim 2s infinite cubic-bezier(.66, 0, 0, 1) !important;
             transform: none !important;
         }
+
         .premium-pricing-card {
             position: relative;
             background: #ffffff;
             border: 3px solid var(--primary);
             border-radius: 24px;
             padding: 2.5rem 2rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
+
         .discount-tag {
             position: absolute;
             top: -25px;
@@ -258,7 +266,7 @@
             font-weight: 900;
             font-size: 1.1rem;
             transform: rotate(10deg);
-            box-shadow: 0 5px 15px rgba(231,76,60,0.4);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
             border: 3px solid white;
             display: flex;
             align-items: center;
@@ -269,10 +277,12 @@
             flex-direction: column;
             text-align: center;
         }
+
         .discount-tag span {
             font-size: 0.75rem;
             display: block;
         }
+
         .premium-price .value {
             font-size: 6rem;
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
@@ -281,31 +291,37 @@
             -webkit-text-fill-color: transparent;
             text-shadow: none;
         }
+
         .premium-bundle-list {
-            background: rgba(0,0,0,0.2);
+            background: rgba(0, 0, 0, 0.2);
             padding: 1.5rem;
             border-radius: var(--radius-md);
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .premium-bundle-list .bundle-item {
             padding: 10px 0;
-            border-bottom: 1px dashed rgba(255,255,255,0.1);
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
         }
+
         .premium-bundle-list .bundle-item:last-child {
             border-bottom: none;
         }
+
         .premium-bundle-list .bundle-item i {
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
             color: white;
-            box-shadow: 0 4px 10px rgba(139,203,155,0.3);
+            box-shadow: 0 4px 10px rgba(139, 203, 155, 0.3);
             border: none;
         }
+
         .premium-bundle-list .bundle-item h4 {
             color: var(--primary-light);
             font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 2px;
         }
+
         .premium-cta {
             background: linear-gradient(135deg, #FFD700 0%, #F5B041 100%);
             color: var(--brown-dark);
@@ -316,17 +332,37 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
         .premium-cta:hover {
             background: linear-gradient(135deg, #F5B041 0%, #F39C12 100%);
             box-shadow: 0 15px 35px rgba(255, 215, 0, 0.6);
             transform: translateY(-5px);
             color: var(--brown-dark);
         }
+
         @media (max-width: 480px) {
-            .premium-price .value { font-size: 4.5rem; }
-            .easter-badge { font-size: 0.85rem; padding: 6px 16px; top: -15px; }
-            .discount-tag { width: 65px; height: 65px; font-size: 0.9rem; top: -15px; right: -10px; }
-            .premium-cta { font-size: 1.1rem; padding: 1.2rem; }
+            .premium-price .value {
+                font-size: 4.5rem;
+            }
+
+            .easter-badge {
+                font-size: 0.85rem;
+                padding: 6px 16px;
+                top: -15px;
+            }
+
+            .discount-tag {
+                width: 65px;
+                height: 65px;
+                font-size: 0.9rem;
+                top: -15px;
+                right: -10px;
+            }
+
+            .premium-cta {
+                font-size: 1.1rem;
+                padding: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -763,41 +799,49 @@
     <section class="offer-section section-padding text-center" id="oferta">
         <div class="container fade-in">
             <div class="offer-box premium-offer-box" style="max-width: 700px; padding-top: 3.5rem;">
-                
+
                 <div class="easter-badge">
                     <i data-lucide="gift" style="width: 16px; height: 16px;"></i>
                     <span>OFERTA ESPECIAL PRÉ-PÁSCOA</span>
                 </div>
 
-                <h2 class="section-title text-white mb-2" style="font-size: 2.2rem; font-weight: 800; line-height: 1.1;">OPORTUNIDADE ÚNICA</h2>
-           
+                <h2 class="section-title text-white mb-2"
+                    style="font-size: 2.2rem; font-weight: 800; line-height: 1.1;">OPORTUNIDADE ÚNICA</h2>
+
 
                 <!-- Premium Pricing Card -->
-                <div class="pricing-card premium-pricing-card mb-8 text-center" style="max-width: 480px; margin-left: auto; margin-right: auto;">
-                    
+                <div class="pricing-card premium-pricing-card mb-8 text-center"
+                    style="max-width: 480px; margin-left: auto; margin-right: auto;">
+
                     <div class="discount-tag">82%<span>OFF</span></div>
-                    
+
                     <span class="old-price" style="font-size: 1.15rem;">De R$ 97,00 por apenas</span>
                     <div class="current-price premium-price mt-2 mb-2">
                         <span class="currency">R$</span>
                         <span class="value">17</span>
                         <span class="cents">,00</span>
                     </div>
-                    <span class="installment-price text-primary mb-6" style="font-size: 1.25rem; font-weight: 700;">ou 3x de R$ 6,45</span>
+                    <span class="installment-price text-primary mb-6" style="font-size: 1.25rem; font-weight: 700;">ou
+                        3x de R$ 6,45</span>
 
-                    <a href="https://pay.cakto.com.br/3a57fh5_793560" class="cta-button premium-cta pulse mx-auto w-full"
-                        style="width: 100%; display: flex;">
+                    <a href="https://pay.cakto.com.br/3a57fh5_793560"
+                        class="cta-button premium-cta pulse mx-auto w-full" style="width: 100%; display: flex;">
                         QUERO ACESSAR TUDO AGORA <i data-lucide="arrow-right"></i>
                     </a>
-                    
-                    <div class="flex-center mt-4 text-sm" style="color: var(--text-light); gap: 0.5rem; opacity: 0.9; font-weight: 500;">
-                        <i data-lucide="lock" style="width: 16px; height: 16px; color: #27AE60;"></i> Pagamento 100% Seguro
+
+                    <div class="flex-center mt-4 text-sm"
+                        style="color: var(--text-light); gap: 0.5rem; opacity: 0.9; font-weight: 500;">
+                        <i data-lucide="lock" style="width: 16px; height: 16px; color: #27AE60;"></i> Pagamento 100%
+                        Seguro
                     </div>
                 </div>
 
                 <!-- Lista de Itens Compacta Premium -->
-                <div class="bundle-list premium-bundle-list" style="text-align: left; max-width: 480px; margin: 0 auto;">
-                    <h4 class="text-white mb-4 text-center" style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-light);">Tudo que está incluso:</h4>
+                <div class="bundle-list premium-bundle-list"
+                    style="text-align: left; max-width: 480px; margin: 0 auto;">
+                    <h4 class="text-white mb-4 text-center"
+                        style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-light);">
+                        Tudo que está incluso:</h4>
                     <div class="bundle-item">
                         <i data-lucide="book-open"></i>
                         <div>
@@ -828,11 +872,16 @@
                     </div>
                 </div>
 
-                <div class="guarantee-box mt-8" style="background: rgba(139, 203, 155, 0.1); padding: 1.5rem 2rem; border-radius: var(--radius-md); border: 1px solid rgba(139, 203, 155, 0.3); display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center;">
-                    <i data-lucide="shield-check" class="guarantee-icon pulse" style="width: 48px; height: 48px; color: var(--primary-light); margin-bottom: 1rem; display: block;"></i>
+                <div class="guarantee-box mt-8"
+                    style="background: rgba(139, 203, 155, 0.1); padding: 1.5rem 2rem; border-radius: var(--radius-md); border: 1px solid rgba(139, 203, 155, 0.3); display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center;">
+                    <i data-lucide="shield-check" class="guarantee-icon pulse"
+                        style="width: 48px; height: 48px; color: var(--primary-light); margin-bottom: 1rem; display: block;"></i>
                     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                        <h4 class="text-white" style="font-size: 1.15rem; margin-bottom: 8px; text-align: center;">Garantia Incondicional de 7 Dias</h4>
-                        <p class="text-white text-sm opacity-80" style="margin: 0; line-height: 1.5; text-align: center; max-width: 450px;">Satisfação total garantida. Se não gostar, devolvemos 100% do seu dinheiro. Risco zero para você.</p>
+                        <h4 class="text-white" style="font-size: 1.15rem; margin-bottom: 8px; text-align: center;">
+                            Garantia Incondicional de 7 Dias</h4>
+                        <p class="text-white text-sm opacity-80"
+                            style="margin: 0; line-height: 1.5; text-align: center; max-width: 450px;">Satisfação total
+                            garantida. Se não gostar, devolvemos 100% do seu dinheiro. Risco zero para você.</p>
                     </div>
                 </div>
             </div>
@@ -890,7 +939,7 @@
 
     <footer class="footer">
         <div class="container text-center">
-            <h3 class="footer-title">Pistache</h3>
+            <h3 class="footer-title">Ovos de Pistache Gourmet</h3>
             <p class="footer-notice">Produto 100% digital. Não enviamos nenhum produto físico.</p>
             <div class="footer-links">
                 <a href="#">Termos de Uso</a>
