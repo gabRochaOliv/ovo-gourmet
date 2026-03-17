@@ -30,26 +30,27 @@
         <link rel="stylesheet" href="style.css?v=2">
     </noscript>
 
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code Deferred -->
     <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1555382172213844');
-        fbq('track', 'PageView');
+        setTimeout(function(){
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1555382172213844');
+            fbq('track', 'PageView');
+        }, 3500); // Retarda 3.5 segundos, tira do First Paint
     </script>
-
     <noscript>
         <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1555382172213844&ev=PageView&noscript=1" alt="fb-pixel" />
+            src="https://www.facebook.com/tr?id=1555382172213844&ev=PageView&noscript=1" alt="fb-pixel" loading="lazy" />
     </noscript>
     <!-- End Meta Pixel Code -->
 
@@ -473,12 +474,8 @@
                             <div class="test-user">
                                 <img src="img/pessoas/pessoa1.avif" alt="Fernanda L." class="user-img" loading="lazy">
                                 <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <div class="stars" style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
+                                        &#9733;&#9733;&#9733;&#9733;&#9733;
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">FERNANDA L.</h5>
                                     <span class="user-loc">RIO DE JANEIRO, RJ</span>
@@ -494,12 +491,8 @@
                                 <img src="img/pessoas/pessoaA.webp" alt="Ana Maria C." class="user-img" width="60"
                                     height="60" loading="lazy">
                                 <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <div class="stars" style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
+                                        &#9733;&#9733;&#9733;&#9733;&#9733;
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">ANA MARIA C.</h5>
                                     <span class="user-loc">RECIFE, PE</span>
@@ -515,12 +508,8 @@
                                 <img src="img/pessoas/pessoaB.webp" alt="Luciana M." class="user-img" width="60"
                                     height="60" loading="lazy">
                                 <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <div class="stars" style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
+                                        &#9733;&#9733;&#9733;&#9733;&#9733;
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">LUCIANA M.</h5>
                                     <span class="user-loc">BELO HORIZONTE, MG</span>
@@ -537,12 +526,8 @@
                                 <img src="img/pessoas/pessoaC.webp" alt="Julia R." class="user-img" width="60"
                                     height="60" loading="lazy">
                                 <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <div class="stars" style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
+                                        &#9733;&#9733;&#9733;&#9733;&#9733;
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">JULIA R.</h5>
                                     <span class="user-loc">CURITIBA, PR</span>
@@ -580,12 +565,8 @@
                             <div class="test-user">
                                 <img src="img/pessoas/pessoaD.avif" alt="Carla F." class="user-img" loading="lazy">
                                 <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <div class="stars" style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
+                                        &#9733;&#9733;&#9733;&#9733;&#9733;
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">CARLA F.</h5>
                                     <span class="user-loc">SALVADOR, BA</span>
