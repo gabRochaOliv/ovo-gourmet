@@ -7,7 +7,7 @@
     <title>Pistache: Ovos Gourmet</title>
     <meta name="description"
         content="Guia simples pra começar do zero, precificar com margem e vender pelo Instagram e WhatsApp.">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/iconeSite.png">
 
@@ -222,26 +222,26 @@
 
         .easter-badge {
             position: absolute !important;
-            top: -20px !important;
+            top: -24px !important;
             left: 0 !important;
             right: 0 !important;
             margin-left: auto !important;
             margin-right: auto !important;
             width: fit-content !important;
-            background: linear-gradient(135deg, #FFD700 0%, #F5B041 100%) !important;
-            color: var(--brown-dark) !important;
-            padding: 6px 18px !important;
+            background: #e2ab24 !important;
+            color: #3e2723 !important;
+            padding: 10px 24px !important;
             border-radius: 30px !important;
             font-weight: 800 !important;
-            font-size: 0.85rem !important;
+            font-size: 0.95rem !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
             gap: 8px !important;
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.4) !important;
+            box-shadow: 0 5px 15px rgba(226, 171, 36, 0.4) !important;
             white-space: nowrap !important;
             z-index: 999 !important;
-            border: 2px solid var(--white) !important;
+            border: 3px solid #ffffff !important;
             animation: pulse-anim 2s infinite cubic-bezier(.66, 0, 0, 1) !important;
             transform: none !important;
         }
@@ -293,15 +293,17 @@
         }
 
         .premium-bundle-list {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 1.5rem;
-            border-radius: var(--radius-md);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: transparent;
+            padding: 0;
+            border: none;
         }
 
         .premium-bundle-list .bundle-item {
-            padding: 10px 0;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
         }
 
         .premium-bundle-list .bundle-item:last-child {
@@ -309,17 +311,26 @@
         }
 
         .premium-bundle-list .bundle-item i {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            color: white;
-            box-shadow: 0 4px 10px rgba(139, 203, 155, 0.3);
-            border: none;
+            color: #ffffff;
+            width: 22px;
+            height: 22px;
+            margin-top: 2px;
+            flex-shrink: 0;
         }
 
         .premium-bundle-list .bundle-item h4 {
-            color: var(--primary-light);
-            font-size: 1.1rem;
-            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.15rem;
+            font-weight: 800;
             margin-bottom: 2px;
+            line-height: 1.2;
+        }
+
+        .premium-bundle-list .bundle-item p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.4;
         }
 
         .premium-cta {
@@ -347,8 +358,8 @@
 
             .easter-badge {
                 font-size: 0.85rem;
-                padding: 6px 16px;
-                top: -15px;
+                padding: 8px 20px;
+                top: -20px;
             }
 
             .discount-tag {
@@ -377,9 +388,9 @@
                 <h1 class="headline-creative"><span class="highlight-premium-pistache">OVOS DE PISTACHE</span><br>que
                     vendem em até <span class="highlight-price">R$150</span></h1>
 
-                <div class="hero-image-wrapper">
-                    <img src="img/ovosDePistache/ovos-pascoa-pistache-brasil-cacau.webp" alt="Ovos de Pistache Gourmet"
-                        class="hero-main-img" width="600" height="400" fetchpriority="high">
+                <div style="margin: 2rem auto; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 600px;">
+                    <img src="img/ovosDePistache/hedLineImagem.png" alt="Ovos de Pistache Gourmet"
+                        style="max-width: 100%; height: auto; display: block; object-fit: contain; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg), 0 0 40px rgba(139, 203, 155, 0.2);" width="600" height="400" fetchpriority="high">
                 </div>
 
                 <p class="subheadline">Mesmo começando do zero...</p>
@@ -454,62 +465,70 @@
                 <div class="slider-container delay-100">
                     <div class="slider-track" id="slider-track">
                         <!-- Testimonial 1 -->
-                        <div class="slider-card active">
-                            <p class="test-quote">"Vendi 50 ovos de pistache só no meu condomínio no primeiro fim de
-                                semana. A
-                                receita do Ovo Trufado é sucesso absoluto! 🙏"</p>
+
+                          <div class="slider-card">
+                            <p class="test-quote">"Nunca imaginei faturar tanto com ovos de Páscoa. Hoje é minha renda
+                                principal
+                                trabalhando de casa, consegui fazer as receitas rapidinho hahaha"</p>
                             <div class="test-user">
-                                <img src="img/pessoas/pessoa3.avif" alt="Renata S." class="user-img" loading="lazy">
-                                <div class="user-meta">
-                                    <h5 class="user-name">RENATA S.</h5>
-                                    <span class="user-loc">SÃO PAULO, SP</span>
+                                <img src="img/pessoas/pessoa1.avif" alt="Fernanda L." class="user-img" loading="lazy">
+                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    </div>
+                                    <h5 class="user-name" style="margin: 0; padding: 0;">FERNANDA L.</h5>
+                                    <span class="user-loc">RIO DE JANEIRO, RJ</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Testimonial 2 -->
                         <div class="slider-card">
-                            <p class="test-quote">"Nunca imaginei faturar tanto com ovos de Páscoa. Hoje é minha renda
-                                principal
-                                trabalhando de casa, consegui fazer as receitas rapidinho hahaha"</p>
+                            <p class="test-quote">"A base que o material ensina é perfeita, muito prático. Meus clientes
+                                amam o Ovo de Pistache Cocrante aqui. "</p>
                             <div class="test-user">
-                                <img src="img/pessoas/pessoa1.avif" alt="Fernanda L." class="user-img" loading="lazy">
-                                <div class="user-meta">
-                                    <h5 class="user-name">FERNANDA L.</h5>
-                                    <span class="user-loc">RIO DE JANEIRO, RJ</span>
+                                <img src="img/pessoas/pessoaA.webp" alt="Ana Maria C." class="user-img" width="60"
+                                    height="60" loading="lazy">
+                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    </div>
+                                    <h5 class="user-name" style="margin: 0; padding: 0;">ANA MARIA C.</h5>
+                                    <span class="user-loc">RECIFE, PE</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Testimonial 3 -->
                         <div class="slider-card">
-                            <p class="test-quote">"A base que o material ensina é perfeita, muito prático. Meus clientes
-                                amam o Ovo de Pistache Cocrante aqui. "</p>
-                            <div class="test-user">
-                                <img src="img/pessoas/pessoaA.webp" alt="Ana Maria C." class="user-img" width="60"
-                                    height="60" loading="lazy">
-                                <div class="user-meta">
-                                    <h5 class="user-name">ANA MARIA C.</h5>
-                                    <span class="user-loc">RECIFE, PE</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 4 -->
-                        <div class="slider-card">
                             <p class="test-quote">"Comecei testando com pouco dinheiro. Hoje já consigo
                                 ajudar em casa vendendo esses ovos premium ❤️"</p>
                             <div class="test-user">
                                 <img src="img/pessoas/pessoaB.webp" alt="Luciana M." class="user-img" width="60"
                                     height="60" loading="lazy">
-                                <div class="user-meta">
-                                    <h5 class="user-name">LUCIANA M.</h5>
+                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    </div>
+                                    <h5 class="user-name" style="margin: 0; padding: 0;">LUCIANA M.</h5>
                                     <span class="user-loc">BELO HORIZONTE, MG</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Testimonial 5 -->
+                        <!-- Testimonial 4 -->
                         <div class="slider-card">
                             <p class="test-quote">"Melhor investimento que fiz. Paguei o material na primeira fornada.
                                 Super
@@ -517,9 +536,38 @@
                             <div class="test-user">
                                 <img src="img/pessoas/pessoaC.webp" alt="Julia R." class="user-img" width="60"
                                     height="60" loading="lazy">
-                                <div class="user-meta">
-                                    <h5 class="user-name">JULIA R.</h5>
+                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    </div>
+                                    <h5 class="user-name" style="margin: 0; padding: 0;">JULIA R.</h5>
                                     <span class="user-loc">CURITIBA, PR</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+
+                          <div class="slider-card active">
+                            <p class="test-quote">"Vendi 50 ovos de pistache só no meu condomínio no primeiro fim de
+                                semana. A
+                                receita do Ovo Trufado é sucesso absoluto! 🙏"</p>
+                            <div class="test-user">
+                                <img src="img/pessoas/pessoa3.avif" alt="Renata S." class="user-img" loading="lazy">
+                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    </div>
+                                    <h5 class="user-name" style="margin: 0; padding: 0;">RENATA S.</h5>
+                                    <span class="user-loc">SÃO PAULO, SP</span>
                                 </div>
                             </div>
                         </div>
@@ -531,8 +579,15 @@
                             </p>
                             <div class="test-user">
                                 <img src="img/pessoas/pessoaD.avif" alt="Carla F." class="user-img" loading="lazy">
-                                <div class="user-meta">
-                                    <h5 class="user-name">CARLA F.</h5>
+                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    </div>
+                                    <h5 class="user-name" style="margin: 0; padding: 0;">CARLA F.</h5>
                                     <span class="user-loc">SALVADOR, BA</span>
                                 </div>
                             </div>
@@ -737,7 +792,65 @@
     </section>
 
     <!-- Raciocínio Financeiro -->
-    <section class="financial-reasoning section-padding" id="raciocinio"
+      <section class="compare-section section-padding" id="comparacao" style="background-color: #fafcfb;">
+        <style>
+            @media (max-width: 768px) {
+                .compare-grid {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+        </style>
+        <div class="container fade-in text-center mx-auto" style="max-width: 900px;">
+            <h2 class="section-title mb-4 mx-auto" style="font-size: 2.2rem; line-height: 1.2; max-width: 700px;">A diferença entre um ovo comum e um presente de Páscoa</h2>
+            <p class="mb-12 text-light mx-auto" style="font-size: 1.1rem; max-width: 600px;">Pequenos detalhes na apresentação e no sabor podem aumentar muito o valor percebido do seu produto.</p>
+
+            <div class="compare-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left; margin-bottom: 5rem;">
+                
+                <!-- Card Antes -->
+                <div class="compare-card" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
+                    <div style="position: relative; height: 260px; overflow: hidden; background: #f4f4f4;">
+                        <span style="position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.8); color: white; font-size: 0.75rem; font-weight: 800; padding: 6px 14px; border-radius: 8px; z-index: 2;">ANTES</span>
+                        <img src="img/ovosDePistache/ovoPistachePretob.png" alt="Ovo Comum" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%);">
+                    </div>
+                    <div style="padding: 2.5rem 2rem;">
+                        <h3 style="font-size: 1.4rem; color: #3e2723; margin-bottom: 1.5rem; font-weight: 800;">Ovo Simples</h3>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #718096; font-size: 0.95rem;"><i data-lucide="x" style="color: #e53e3e; min-width: 20px;"></i> Sem embalagem premium</li>
+                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #718096; font-size: 0.95rem;"><i data-lucide="x" style="color: #e53e3e; min-width: 20px;"></i> Sem diferencial visual</li>
+                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #718096; font-size: 0.95rem;"><i data-lucide="x" style="color: #e53e3e; min-width: 20px;"></i> Parece apenas mais um produto</li>
+                        </ul>
+                        <div style="border-top: 1px solid #edf2f7; padding-top: 1.5rem;">
+                            <p style="font-size: 0.8rem; font-weight: 700; color: #a0aec0; letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">Resultado:</p>
+                            <p style="color: #718096; font-style: italic; font-size: 0.95rem;">Cliente pergunta o preço, compara com outros ou pede desconto.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Depois -->
+                <div class="compare-card" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 2px solid var(--primary);">
+                    <div style="position: relative; height: 260px; overflow: hidden; background: #fdf5e6;">
+                        <span style="position: absolute; top: 15px; left: 15px; background: #e2ab24; color: #3e2723; font-size: 0.75rem; font-weight: 800; padding: 6px 14px; border-radius: 8px; z-index: 2;">DEPOIS</span>
+                        <img src="img/ovosDePistache/ovoPistacheTop.jpg" alt="Ovo Premium" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 2.5rem 2rem;">
+                        <h3 style="font-size: 1.4rem; color: #3e2723; margin-bottom: 1.5rem; font-weight: 800;">Ovo de Pistache Premium</h3>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #4a5568; font-size: 0.95rem; font-weight: 600;"><i data-lucide="check" style="color: #38a169; min-width: 20px;"></i> Receita e técnica refinadas</li>
+                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #4a5568; font-size: 0.95rem; font-weight: 600;"><i data-lucide="check" style="color: #38a169; min-width: 20px;"></i> Identidade de alto nível</li>
+                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #4a5568; font-size: 0.95rem; font-weight: 600;"><i data-lucide="check" style="color: #38a169; min-width: 20px;"></i> Parece um verdadeiro presente</li>
+                        </ul>
+                        <div style="border-top: 1px solid #edf2f7; padding-top: 1.5rem;">
+                            <p style="font-size: 0.8rem; font-weight: 800; color: #e2ab24; letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">Resultado:</p>
+                            <p style="color: #2d3748; font-weight: 700; font-size: 0.95rem;">Mais valor percebido, mais desejo e clientes pagando mais sem reclamar.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+          
+    </section>
+
+     <section class="financial-reasoning section-padding" id="raciocinio"
         style="background: linear-gradient(135deg, var(--bg-color) 0%, #fffefe 100%);">
         <div class="container fade-in text-center">
 
@@ -796,17 +909,18 @@
 
 
 
+
     <section class="offer-section section-padding text-center" id="oferta">
         <div class="container fade-in">
-            <div class="offer-box premium-offer-box" style="max-width: 700px; padding-top: 3.5rem;">
+            <div class="offer-box premium-offer-box" style="max-width: 700px; padding-top: 4rem;">
 
                 <div class="easter-badge">
-                    <i data-lucide="gift" style="width: 16px; height: 16px;"></i>
+                    <i data-lucide="gift" style="width: 18px; height: 18px; stroke-width: 2.5;"></i>
                     <span>OFERTA ESPECIAL PRÉ-PÁSCOA</span>
                 </div>
 
                 <h2 class="section-title text-white mb-2"
-                    style="font-size: 2.2rem; font-weight: 800; line-height: 1.1;">OPORTUNIDADE ÚNICA</h2>
+                    style="font-size: 1.8rem; font-weight: 800; line-height: 1.1;">OPORTUNIDADE<br>ÚNICA</h2>
 
 
                 <!-- Premium Pricing Card -->
@@ -839,35 +953,32 @@
                 <!-- Lista de Itens Compacta Premium -->
                 <div class="bundle-list premium-bundle-list"
                     style="text-align: left; max-width: 480px; margin: 0 auto;">
-                    <h4 class="text-white mb-4 text-center"
-                        style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-light);">
-                        Tudo que está incluso:</h4>
                     <div class="bundle-item">
                         <i data-lucide="book-open"></i>
                         <div>
                             <h4>Material Pistache Gourmet</h4>
-                            <p style="opacity: 0.9;">Receitas e técnicas premium passo a passo.</p>
+                            <p>Receitas e técnicas premium passo a passo.</p>
                         </div>
                     </div>
                     <div class="bundle-item">
                         <i data-lucide="check-square"></i>
                         <div>
                             <h4>Checklist de Materiais</h4>
-                            <p style="opacity: 0.9;">Lista exata do que comprar sem nenhum desperdício.</p>
+                            <p>Lista exata do que comprar sem nenhum desperdício.</p>
                         </div>
                     </div>
                     <div class="bundle-item">
                         <i data-lucide="trending-up"></i>
                         <div>
                             <h4>Guia de Precificação</h4>
-                            <p style="opacity: 0.9;">Aprenda a cobrar justo e ter alta margem de lucro.</p>
+                            <p>Aprenda a cobrar justo e ter alta margem de lucro.</p>
                         </div>
                     </div>
                     <div class="bundle-item">
                         <i data-lucide="instagram"></i>
                         <div>
                             <h4>Top Estratégias de Venda</h4>
-                            <p style="opacity: 0.9;">Como atrair clientes pelo Instagram e WhatsApp.</p>
+                            <p>Como atrair clientes pelo Instagram e WhatsApp.</p>
                         </div>
                     </div>
                 </div>
@@ -888,6 +999,8 @@
         </div>
     </section>
 
+    <!-- Compare Section -->
+ 
     <section class="faq-section section-padding bg-white" id="faq">
         <div class="container fade-in text-center max-w-3xl border-faq mx-auto">
             <h2 class="section-title mb-10">Dúvidas Frequentes</h2>
@@ -932,6 +1045,68 @@
                         </p>
                     </div>
                 </details>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="final-checkout-section section-padding" style="background-color: #38241E; color: var(--white);">
+        <div class="container fade-in" style="max-width: 550px; margin: 0 auto;">
+
+            <h2 class="text-center text-white mb-10" style="font-size: 1.8rem; font-weight: 800; line-height: 1.25;">
+                Tudo pronto para começar?<br>Veja tudo que você está levando hoje:
+            </h2>
+
+            <div class="final-checkout-list"
+                style="display: flex; flex-direction: column; gap: 1.4rem; margin-bottom: 3.5rem;">
+                <div style="display: flex; align-items: center; gap: 14px;">
+                    <i data-lucide="check-circle-2"
+                        style="color: var(--primary); width: 26px; height: 26px; flex-shrink: 0; stroke-width: 2.5;"></i>
+                    <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">O Método Completo: Ovos de
+                        Pistache</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 14px;">
+                    <i data-lucide="check-circle-2"
+                        style="color: var(--primary); width: 26px; height: 26px; flex-shrink: 0; stroke-width: 2.5;"></i>
+                    <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">Acesso Vitalício</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 14px;">
+                    <i data-lucide="check-circle-2"
+                        style="color: var(--primary); width: 26px; height: 26px; flex-shrink: 0; stroke-width: 2.5;"></i>
+                    <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">BÔNUS 1 – Lista de Materiais
+                        Exatos</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 14px;">
+                    <i data-lucide="check-circle-2"
+                        style="color: var(--primary); width: 26px; height: 26px; flex-shrink: 0; stroke-width: 2.5;"></i>
+                    <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">BÔNUS 2 – Guia de
+                        Precificação</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 14px;">
+                    <i data-lucide="check-circle-2"
+                        style="color: var(--primary); width: 26px; height: 26px; flex-shrink: 0; stroke-width: 2.5;"></i>
+                    <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">BÔNUS 3 – Top estratégias de
+                        vendas</span>
+                </div>
+            </div>
+
+            <div class="text-center mb-8">
+                <p style="font-size: 1.15rem; font-weight: 700; margin-bottom: 2px; color: #fff;">Tudo isso por apenas
+                </p>
+                <div
+                    style="font-size: 5.5rem; font-weight: 900; line-height: 1; margin-bottom: 5px; color: #fff; text-transform: uppercase;">
+                    R$ 17<span style="font-size: 4rem;">,00</span>
+                </div>
+                <p style="font-size: 1.2rem; font-weight: 700; color: #fff;">ou 3x R$6,45</p>
+            </div>
+
+            <div class="text-center mb-4">
+                <a href="https://pay.cakto.com.br/3a57fh5_793560" class="cta-button pulse"
+                    style="background-color: #3B9273; color: white; width: 100%; display: flex; justify-content: center; font-size: 1.1rem; padding: 1.4rem; border-radius: 18px; border: none; box-shadow: 0 10px 25px rgba(59, 146, 115, 0.4);">
+                    <i data-lucide="lock" style="width: 22px; height: 22px; stroke-width: 2.5;"></i>
+                    <span style="font-weight: 800; letter-spacing: 0.5px;">QUERO ACESSO IMEDIATO E VITALÍCIO</span>
+                </a>
+                <p style="color: #fff; font-size: 0.95rem; font-weight: 700; margin-top: 1.5rem; line-height: 1.4;">Acesso liberado em poucos minutos <br> após a confirmação.</p>
             </div>
 
         </div>
@@ -1002,6 +1177,165 @@
             // Inicia o contador e atualiza a cada segundo
             updateCountdown();
             setInterval(updateCountdown, 1000);
+        });
+    </script>
+    <!-- Sales Notification -->
+    <style>
+        .sales-notification {
+            position: fixed;
+            bottom: -100px;
+            left: 20px;
+            background: #ffffff;
+            border: 1px solid #1a202c;
+            border-radius: 8px;
+            display: flex;
+            align-items: stretch;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            z-index: 9999;
+            transition: bottom 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.5s ease;
+            opacity: 0;
+            pointer-events: none;
+            width: 250px;
+            max-width: calc(100vw - 40px);
+            font-family: var(--font-main);
+        }
+
+        .sales-notification.show {
+            bottom: 20px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .sales-notif-content {
+            padding: 10px 12px;
+            flex-grow: 1;
+        }
+
+        .sales-notif-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 2px;
+            line-height: 1.1;
+        }
+
+        .sales-notif-text {
+            font-size: 0.75rem;
+            color: #718096;
+            margin-bottom: 3px;
+            line-height: 1.2;
+        }
+
+        .sales-notif-product {
+            color: #cda434;
+            font-weight: 700;
+        }
+
+        .sales-notif-text strong {
+            color: #718096;
+            font-weight: 800;
+        }
+
+        .sales-notif-meta {
+            font-size: 0.65rem;
+            color: #a0aec0;
+            font-weight: 500;
+        }
+
+        .sales-notif-close {
+            width: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid #edf2f7;
+            background: #fafcff;
+            color: #a0aec0;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            transition: color 0.2s, background 0.2s;
+            user-select: none;
+        }
+        
+        .sales-notif-close:hover {
+            color: #1a202c;
+            background: #f1f5f9;
+        }
+        
+        @media (max-width: 480px) {
+            .sales-notification {
+                bottom: -150px;
+                left: 10px;
+                width: 250px;
+            }
+            .sales-notification.show {
+                bottom: 15px;
+            }
+        }
+    </style>
+
+    <div class="sales-notification" id="salesNotification">
+        <div class="sales-notif-content">
+            <div class="sales-notif-name" id="salesNotifName">Roberta Almeida</div>
+            <div class="sales-notif-text">Comprou <span class="sales-notif-product">Material Ovos de Pistache Gourmet</span> por <strong>R$ 17,00</strong></div>
+            <div class="sales-notif-meta"><span id="salesNotifLocation">Manaus, AM</span> • Agora</div>
+        </div>
+        <div class="sales-notif-close" id="salesNotifClose">x</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const notification = document.getElementById('salesNotification');
+            const closeBtn = document.getElementById('salesNotifClose');
+            const nameEl = document.getElementById('salesNotifName');
+            const locationEl = document.getElementById('salesNotifLocation');
+            
+            if(!notification) return;
+
+            const names = ["Roberta Almeida", "Ana Clara", "Julia Santos", "Marcia Souza", "Fernanda Lima", "Amanda Silva", "Letícia Costa", "Beatriz Oliveira", "Carolina Mendes", "Patrícia Alves", "Camila Rocha", "Vanessa Ribeiro", "Juliana Castro", "Gabriela Martins", "Luiza Cardoso"];
+            const locations = ["Manaus, AM", "São Paulo, SP", "Rio de Janeiro, RJ", "Curitiba, PR", "Belo Horizonte, MG", "Salvador, BA", "Recife, PE", "Fortaleza, CE", "Brasília, DF", "Porto Alegre, RS", "Goiânia, GO", "Manaus, AM", "Belém, PA", "Vitória, ES", "Florianópolis, SC"];
+
+            let timeoutId;
+            let displayInterval;
+
+            function showNotification() {
+                const randomName = names[Math.floor(Math.random() * names.length)];
+                const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+                
+                nameEl.textContent = randomName;
+                locationEl.textContent = randomLocation;
+                
+                notification.classList.add('show');
+                
+                // Hide after 5 seconds
+                timeoutId = setTimeout(() => {
+                    hideNotification();
+                }, 5000);
+            }
+
+            function hideNotification() {
+                notification.classList.remove('show');
+            }
+
+            closeBtn.addEventListener('click', () => {
+                hideNotification();
+                clearTimeout(timeoutId);
+            });
+
+            // Initial pop up
+            setTimeout(() => {
+                showNotification();
+                
+                // Repeat logic
+                displayInterval = setInterval(() => {
+                    if(!notification.classList.contains('show')) {
+                        // wait perfectly for the interval
+                        setTimeout(showNotification, 500);
+                    }
+                }, 15000); // 15 seconds fixed interval
+            }, 12000); // 12 seconds for initial pop up
         });
     </script>
 </body>
