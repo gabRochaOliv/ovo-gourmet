@@ -32,7 +32,7 @@
 
     <!-- Meta Pixel Code Deferred -->
     <script>
-        setTimeout(function(){
+        setTimeout(function () {
             !function (f, b, e, v, n, t, s) {
                 if (f.fbq) return; n = f.fbq = function () {
                     n.callMethod ?
@@ -50,7 +50,8 @@
     </script>
     <noscript>
         <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1555382172213844&ev=PageView&noscript=1" alt="fb-pixel" loading="lazy" />
+            src="https://www.facebook.com/tr?id=1555382172213844&ev=PageView&noscript=1" alt="fb-pixel"
+            loading="lazy" />
     </noscript>
     <!-- End Meta Pixel Code -->
 
@@ -374,6 +375,39 @@
                 padding: 1.2rem;
             }
         }
+
+        .highlight-simple {
+            position: relative;
+            display: inline-block;
+            font-weight: 800;
+            color: var(--white);
+            padding: 0 4px;
+            z-index: 1;
+        }
+
+        .highlight-simple::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: #FF1493; /* Rosa vibrante */
+            opacity: 0.8;
+            z-index: -1;
+            border-radius: 2px;
+        }
+
+        /* Confeiteiras Card Highlight */
+        .card-confeiteira .card-icon {
+            background-color: rgba(240, 98, 146, 0.12) !important;
+            color: #f06292 !important;
+        }
+
+        .card-confeiteira h3 {
+            color: #f06292 !important;
+            font-weight: 800;
+        }
     </style>
 </head>
 
@@ -384,12 +418,14 @@
         <div class="container hero-container">
             <div class="hero-content fade-in">
                 <div class="badge">Material Prático</div>
-                <h1 class="headline-creative"><span class="highlight-premium-pistache">OVOS DE PISTACHE</span><br>que
-                    vendem em até <span class="highlight-price">R$150</span></h1>
+                <h1 class="headline-creative">Aprenda a fazer <span class="highlight-premium-pistache">OVOS DE PISTACHE
+                        GOURMET</span><br>que vendem por até <span class="highlight-price">R$150</span></h1>
 
-                <div style="margin: 2rem auto; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 600px;">
+                <div
+                    style="margin: 2rem auto; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 600px;">
                     <img src="img/ovosDePistache/imgPrincipalAtt.webp" alt="Ovos de Pistache Gourmet"
-                        style="max-width: 100%; height: auto; display: block; object-fit: contain; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg), 0 0 40px rgba(139, 203, 155, 0.2);" width="637" height="965" fetchpriority="high" decoding="async">
+                        style="max-width: 100%; height: auto; display: block; object-fit: contain; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg), 0 0 40px rgba(139, 203, 155, 0.2);"
+                        width="637" height="965" fetchpriority="high" decoding="async">
                 </div>
 
                 <p class="subheadline">Mesmo começando do zero...</p>
@@ -415,7 +451,7 @@
             <div class="urgency-wrapper">
                 <span class="urgency-badge-alert"><i data-lucide="bell"></i> Lembrete</span>
                 <h2 class="urgency-title-simple">Faltam <span id="days-count" class="highlight-primary">--</span> dias
-                    para a Páscoa</h2>
+                    para a <span class="highlight-simple">Páscoa</span></h2>
                 <p class="urgency-subtitle">A época mais lucrativa do ano para confeiteiras!</p>
 
                 <div class="urgency-countdown-centered mt-8 mb-8">
@@ -465,14 +501,16 @@
                     <div class="slider-track" id="slider-track">
                         <!-- Testimonial 1 -->
 
-                          <div class="slider-card">
+                        <div class="slider-card">
                             <p class="test-quote">"Nunca imaginei faturar tanto com ovos de Páscoa. Hoje é minha renda
                                 principal
                                 trabalhando de casa, consegui fazer as receitas rapidinho hahaha"</p>
                             <div class="test-user">
                                 <img src="img/pessoas/pessoa1.avif" alt="Fernanda L." class="user-img" loading="lazy">
-                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
+                                <div class="user-meta"
+                                    style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars"
+                                        style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
                                         &#9733;&#9733;&#9733;&#9733;&#9733;
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">FERNANDA L.</h5>
@@ -488,8 +526,10 @@
                             <div class="test-user">
                                 <img src="img/pessoas/pessoaA.webp" alt="Ana Maria C." class="user-img" width="60"
                                     height="60" loading="lazy">
-                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
+                                <div class="user-meta"
+                                    style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars"
+                                        style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
                                         &#9733;&#9733;&#9733;&#9733;&#9733;
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">ANA MARIA C.</h5>
@@ -505,8 +545,10 @@
                             <div class="test-user">
                                 <img src="img/pessoas/pessoaB.webp" alt="Luciana M." class="user-img" width="60"
                                     height="60" loading="lazy">
-                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
+                                <div class="user-meta"
+                                    style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars"
+                                        style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
                                         &#9733;&#9733;&#9733;&#9733;&#9733;
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">LUCIANA M.</h5>
@@ -523,8 +565,10 @@
                             <div class="test-user">
                                 <img src="img/pessoas/pessoaC.webp" alt="Julia R." class="user-img" width="60"
                                     height="60" loading="lazy">
-                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
+                                <div class="user-meta"
+                                    style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars"
+                                        style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
                                         &#9733;&#9733;&#9733;&#9733;&#9733;
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">JULIA R.</h5>
@@ -535,19 +579,46 @@
 
                         <!-- Testimonial 5 -->
 
-                          <div class="slider-card active">
+                        <div class="slider-card active">
                             <p class="test-quote">"Vendi 50 ovos de pistache só no meu condomínio no primeiro fim de
                                 semana. A
                                 receita do Ovo Trufado é sucesso absoluto! 🙏"</p>
                             <div class="test-user">
                                 <img src="img/pessoas/pessoa3.avif" alt="Renata S." class="user-img" loading="lazy">
-                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <div class="user-meta"
+                                    style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars"
+                                        style="display: flex; gap: 2px; color: #F5B041; margin-bottom: 2px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                                            stroke="none">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                                            stroke="none">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                                            stroke="none">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                                            stroke="none">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                                            stroke="none">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">RENATA S.</h5>
                                     <span class="user-loc">SÃO PAULO, SP</span>
@@ -562,8 +633,10 @@
                             </p>
                             <div class="test-user">
                                 <img src="img/pessoas/pessoaD.avif" alt="Carla F." class="user-img" loading="lazy">
-                                <div class="user-meta" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                                    <div class="stars" style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
+                                <div class="user-meta"
+                                    style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                    <div class="stars"
+                                        style="color: #F5B041; margin-bottom: 2px; font-size: 14px; letter-spacing: 2px;">
                                         &#9733;&#9733;&#9733;&#9733;&#9733;
                                     </div>
                                     <h5 class="user-name" style="margin: 0; padding: 0;">CARLA F.</h5>
@@ -709,8 +782,8 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-img-wrapper">
-                        <img src="img/ovosDePistache/texture2Pistache.webp" alt="Alto Valor Percebido" class="feature-photo"
-                            width="350" height="240" loading="lazy">
+                        <img src="img/ovosDePistache/texture2Pistache.webp" alt="Alto Valor Percebido"
+                            class="feature-photo" width="350" height="240" loading="lazy">
                     </div>
                     <div class="feature-content">
                         <h3>Alto Valor Percebido</h3>
@@ -748,7 +821,7 @@
                     <h3>Iniciantes absolutos</h3>
                     <p>Você nunca mexeu com doces antes? Este guia te ensina o básico com um passo a passo prático.</p>
                 </div>
-                <div class="card card-hover">
+                <div class="card card-hover card-confeiteira">
                     <div class="card-icon"><i data-lucide="chef-hat"></i></div>
                     <h3>Confeiteiras</h3>
                     <p>Quer elevar o padrão do seu menu e se destacar com um produto premium para clientes de alto
@@ -771,7 +844,7 @@
     </section>
 
     <!-- Raciocínio Financeiro -->
-      <section class="compare-section section-padding" id="comparacao" style="background-color: #fafcfb;">
+    <section class="compare-section section-padding" id="comparacao" style="background-color: #fafcfb;">
         <style>
             @media (max-width: 768px) {
                 .compare-grid {
@@ -780,56 +853,98 @@
             }
         </style>
         <div class="container fade-in text-center mx-auto" style="max-width: 900px;">
-            <h2 class="section-title mb-4 mx-auto" style="font-size: 2.2rem; line-height: 1.2; max-width: 700px;">A diferença entre um ovo comum e um presente de Páscoa</h2>
-            <p class="mb-12 text-light mx-auto" style="font-size: 1.1rem; max-width: 600px;">Pequenos detalhes na apresentação e no sabor podem aumentar muito o valor percebido do seu produto.</p>
+            <h2 class="section-title mb-4 mx-auto" style="font-size: 2.2rem; line-height: 1.2; max-width: 700px;">A
+                diferença entre um ovo comum e um presente de Páscoa</h2>
+            <p class="mb-12 text-light mx-auto" style="font-size: 1.1rem; max-width: 600px;">Pequenos detalhes na
+                apresentação e no sabor podem aumentar muito o valor percebido do seu produto.</p>
 
-            <div class="compare-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left; margin-bottom: 5rem;">
-                
+            <div class="compare-grid"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left; margin-bottom: 5rem;">
+
                 <!-- Card Antes -->
-                <div class="compare-card" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
+                <div class="compare-card"
+                    style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
                     <div style="position: relative; height: 260px; overflow: hidden; background: #f4f4f4;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.8); color: white; font-size: 0.75rem; font-weight: 800; padding: 6px 14px; border-radius: 8px; z-index: 2;">ANTES</span>
-                        <img src="img/ovosDePistache/ovoPistachePretob.png" alt="Ovo Comum" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%);" loading="lazy" decoding="async">
+                        <span
+                            style="position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.8); color: white; font-size: 0.75rem; font-weight: 800; padding: 6px 14px; border-radius: 8px; z-index: 2;">ANTES</span>
+                        <img src="img/ovosDePistache/ovoPistachePretob.png" alt="Ovo Comum"
+                            style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%);"
+                            loading="lazy" decoding="async">
                     </div>
                     <div style="padding: 2.5rem 2rem;">
-                        <h3 style="font-size: 1.4rem; color: #3e2723; margin-bottom: 1.5rem; font-weight: 800;">Ovo Simples</h3>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
-                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #718096; font-size: 0.95rem;"><i data-lucide="x" style="color: #e53e3e; min-width: 20px;"></i> Sem embalagem premium</li>
-                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #718096; font-size: 0.95rem;"><i data-lucide="x" style="color: #e53e3e; min-width: 20px;"></i> Sem diferencial visual</li>
-                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #718096; font-size: 0.95rem;"><i data-lucide="x" style="color: #e53e3e; min-width: 20px;"></i> Parece apenas mais um produto</li>
+                        <h3 style="font-size: 1.4rem; color: #3e2723; margin-bottom: 1.5rem; font-weight: 800;">Ovo
+                            Simples</h3>
+                        <ul
+                            style="list-style: none; padding: 0; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                            <li
+                                style="display: flex; gap: 10px; align-items: flex-start; color: #718096; font-size: 0.95rem;">
+                                <i data-lucide="x" style="color: #e53e3e; min-width: 20px;"></i> Sem embalagem premium
+                            </li>
+                            <li
+                                style="display: flex; gap: 10px; align-items: flex-start; color: #718096; font-size: 0.95rem;">
+                                <i data-lucide="x" style="color: #e53e3e; min-width: 20px;"></i> Sem diferencial visual
+                            </li>
+                            <li
+                                style="display: flex; gap: 10px; align-items: flex-start; color: #718096; font-size: 0.95rem;">
+                                <i data-lucide="x" style="color: #e53e3e; min-width: 20px;"></i> Parece apenas mais um
+                                produto
+                            </li>
                         </ul>
                         <div style="border-top: 1px solid #edf2f7; padding-top: 1.5rem;">
-                            <p style="font-size: 0.8rem; font-weight: 700; color: #a0aec0; letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">Resultado:</p>
-                            <p style="color: #718096; font-style: italic; font-size: 0.95rem;">Cliente pergunta o preço, compara com outros ou pede desconto.</p>
+                            <p
+                                style="font-size: 0.8rem; font-weight: 700; color: #a0aec0; letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">
+                                Resultado:</p>
+                            <p style="color: #718096; font-style: italic; font-size: 0.95rem;">Cliente pergunta o preço,
+                                compara com outros ou pede desconto.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card Depois -->
-                <div class="compare-card" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 2px solid var(--primary);">
+                <div class="compare-card"
+                    style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 2px solid var(--primary);">
                     <div style="position: relative; height: 260px; overflow: hidden; background: #fdf5e6;">
-                        <span style="position: absolute; top: 15px; left: 15px; background: #e2ab24; color: #3e2723; font-size: 0.75rem; font-weight: 800; padding: 6px 14px; border-radius: 8px; z-index: 2;">DEPOIS</span>
-                        <img src="img/ovosDePistache/imagemTopOvo.webp" alt="Ovo Premium" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+                        <span
+                            style="position: absolute; top: 15px; left: 15px; background: #e2ab24; color: #3e2723; font-size: 0.75rem; font-weight: 800; padding: 6px 14px; border-radius: 8px; z-index: 2;">DEPOIS</span>
+                        <img src="img/ovosDePistache/imagemTopOvo.webp" alt="Ovo Premium"
+                            style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
                     </div>
                     <div style="padding: 2.5rem 2rem;">
-                        <h3 style="font-size: 1.4rem; color: #3e2723; margin-bottom: 1.5rem; font-weight: 800;">Ovo de Pistache Premium</h3>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
-                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #4a5568; font-size: 0.95rem; font-weight: 600;"><i data-lucide="check" style="color: #38a169; min-width: 20px;"></i> Receita e técnica refinadas</li>
-                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #4a5568; font-size: 0.95rem; font-weight: 600;"><i data-lucide="check" style="color: #38a169; min-width: 20px;"></i> Identidade de alto nível</li>
-                            <li style="display: flex; gap: 10px; align-items: flex-start; color: #4a5568; font-size: 0.95rem; font-weight: 600;"><i data-lucide="check" style="color: #38a169; min-width: 20px;"></i> Parece um verdadeiro presente</li>
+                        <h3 style="font-size: 1.4rem; color: #3e2723; margin-bottom: 1.5rem; font-weight: 800;">Ovo de
+                            Pistache Premium</h3>
+                        <ul
+                            style="list-style: none; padding: 0; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                            <li
+                                style="display: flex; gap: 10px; align-items: flex-start; color: #4a5568; font-size: 0.95rem; font-weight: 600;">
+                                <i data-lucide="check" style="color: #38a169; min-width: 20px;"></i> Receita e técnica
+                                refinadas
+                            </li>
+                            <li
+                                style="display: flex; gap: 10px; align-items: flex-start; color: #4a5568; font-size: 0.95rem; font-weight: 600;">
+                                <i data-lucide="check" style="color: #38a169; min-width: 20px;"></i> Identidade de alto
+                                nível
+                            </li>
+                            <li
+                                style="display: flex; gap: 10px; align-items: flex-start; color: #4a5568; font-size: 0.95rem; font-weight: 600;">
+                                <i data-lucide="check" style="color: #38a169; min-width: 20px;"></i> Parece um
+                                verdadeiro presente
+                            </li>
                         </ul>
                         <div style="border-top: 1px solid #edf2f7; padding-top: 1.5rem;">
-                            <p style="font-size: 0.8rem; font-weight: 800; color: #e2ab24; letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">Resultado:</p>
-                            <p style="color: #2d3748; font-weight: 700; font-size: 0.95rem;">Mais valor percebido, mais desejo e clientes pagando mais sem reclamar.</p>
+                            <p
+                                style="font-size: 0.8rem; font-weight: 800; color: #e2ab24; letter-spacing: 1px; margin-bottom: 0.5rem; text-transform: uppercase;">
+                                Resultado:</p>
+                            <p style="color: #2d3748; font-weight: 700; font-size: 0.95rem;">Mais valor percebido, mais
+                                desejo e clientes pagando mais sem reclamar.</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-          
+
     </section>
 
-     <section class="financial-reasoning section-padding" id="raciocinio"
+    <section class="financial-reasoning section-padding" id="raciocinio"
         style="background: linear-gradient(135deg, var(--bg-color) 0%, #fffefe 100%);">
         <div class="container fade-in text-center">
 
@@ -979,7 +1094,7 @@
     </section>
 
     <!-- Compare Section -->
- 
+
     <section class="faq-section section-padding bg-white" id="faq">
         <div class="container fade-in text-center max-w-3xl border-faq mx-auto">
             <h2 class="section-title mb-10">Dúvidas Frequentes</h2>
@@ -1085,7 +1200,8 @@
                     <i data-lucide="lock" style="width: 22px; height: 22px; stroke-width: 2.5;"></i>
                     <span style="font-weight: 800; letter-spacing: 0.5px;">QUERO ACESSO IMEDIATO E VITALÍCIO</span>
                 </a>
-                <p style="color: #fff; font-size: 0.95rem; font-weight: 700; margin-top: 1.5rem; line-height: 1.4;">Acesso liberado em poucos minutos <br> após a confirmação.</p>
+                <p style="color: #fff; font-size: 0.95rem; font-weight: 700; margin-top: 1.5rem; line-height: 1.4;">
+                    Acesso liberado em poucos minutos <br> após a confirmação.</p>
             </div>
 
         </div>
@@ -1169,7 +1285,7 @@
             border-radius: 8px;
             display: flex;
             align-items: stretch;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             z-index: 9999;
             transition: bottom 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.5s ease;
             opacity: 0;
@@ -1237,18 +1353,19 @@
             transition: color 0.2s, background 0.2s;
             user-select: none;
         }
-        
+
         .sales-notif-close:hover {
             color: #1a202c;
             background: #f1f5f9;
         }
-        
+
         @media (max-width: 480px) {
             .sales-notification {
                 bottom: -150px;
                 left: 10px;
                 width: 250px;
             }
+
             .sales-notification.show {
                 bottom: 15px;
             }
@@ -1258,7 +1375,8 @@
     <div class="sales-notification" id="salesNotification">
         <div class="sales-notif-content">
             <div class="sales-notif-name" id="salesNotifName">Roberta Almeida</div>
-            <div class="sales-notif-text">Comprou <span class="sales-notif-product">Material Ovos de Pistache Gourmet</span> por <strong>R$ 17,00</strong></div>
+            <div class="sales-notif-text">Comprou <span class="sales-notif-product">Material Ovos de Pistache
+                    Gourmet</span> por <strong>R$ 17,00</strong></div>
             <div class="sales-notif-meta"><span id="salesNotifLocation">Manaus, AM</span> • Agora</div>
         </div>
         <div class="sales-notif-close" id="salesNotifClose">x</div>
@@ -1270,8 +1388,8 @@
             const closeBtn = document.getElementById('salesNotifClose');
             const nameEl = document.getElementById('salesNotifName');
             const locationEl = document.getElementById('salesNotifLocation');
-            
-            if(!notification) return;
+
+            if (!notification) return;
 
             const names = ["Roberta Almeida", "Ana Clara", "Julia Santos", "Marcia Souza", "Fernanda Lima", "Amanda Silva", "Letícia Costa", "Beatriz Oliveira", "Carolina Mendes", "Patrícia Alves", "Camila Rocha", "Vanessa Ribeiro", "Juliana Castro", "Gabriela Martins", "Luiza Cardoso"];
             const locations = ["Manaus, AM", "São Paulo, SP", "Rio de Janeiro, RJ", "Curitiba, PR", "Belo Horizonte, MG", "Salvador, BA", "Recife, PE", "Fortaleza, CE", "Brasília, DF", "Porto Alegre, RS", "Goiânia, GO", "Manaus, AM", "Belém, PA", "Vitória, ES", "Florianópolis, SC"];
@@ -1282,12 +1400,12 @@
             function showNotification() {
                 const randomName = names[Math.floor(Math.random() * names.length)];
                 const randomLocation = locations[Math.floor(Math.random() * locations.length)];
-                
+
                 nameEl.textContent = randomName;
                 locationEl.textContent = randomLocation;
-                
+
                 notification.classList.add('show');
-                
+
                 // Hide after 5 seconds
                 timeoutId = setTimeout(() => {
                     hideNotification();
@@ -1306,10 +1424,10 @@
             // Initial pop up
             setTimeout(() => {
                 showNotification();
-                
+
                 // Repeat logic
                 displayInterval = setInterval(() => {
-                    if(!notification.classList.contains('show')) {
+                    if (!notification.classList.contains('show')) {
                         // wait perfectly for the interval
                         setTimeout(showNotification, 500);
                     }
