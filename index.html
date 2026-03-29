@@ -392,21 +392,54 @@
             left: 0;
             width: 100%;
             height: 50%;
-            background-color: #FF1493; /* Rosa vibrante */
+            background-color: #FF1493;
+            /* Rosa vibrante */
             opacity: 0.8;
             z-index: -1;
             border-radius: 2px;
         }
 
-        /* Confeiteiras Card Highlight */
-        .card-confeiteira .card-icon {
-            background-color: rgba(240, 98, 146, 0.12) !important;
-            color: #f06292 !important;
+        /* Footer Adjustments */
+        .footer {
+            background-color: #ffffff !important;
+            padding: 5rem 0 3rem !important;
+            border-top: 1px solid rgba(0,0,0,0.06);
         }
 
-        .card-confeiteira h3 {
-            color: #f06292 !important;
-            font-weight: 800;
+        .footer-title {
+            color: var(--brown-dark) !important;
+            font-weight: 800 !important;
+            margin-bottom: 0.8rem !important;
+        }
+
+        .footer-notice {
+            color: var(--text-light) !important;
+            font-size: 0.95rem !important;
+            margin-bottom: 2rem !important;
+            opacity: 0.9;
+        }
+
+        .footer-links a {
+            color: var(--primary-dark) !important;
+            font-weight: 700 !important;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+
+        .footer-links .separator {
+            color: #cbd5e0 !important;
+            margin: 0 12px !important;
+        }
+
+        .copyright {
+            color: #a0aec0 !important;
+            font-size: 0.85rem !important;
+            margin-top: 3.5rem !important;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -487,6 +520,46 @@
         </div>
     </section>
 
+    <!-- Nova Seção de Estatísticas (Adaptada da imagem) -->
+    <section class="statistics-section section-padding" style="background-color: transparent; padding-bottom: 0;">
+        <div class="container fade-in">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; text-align: center;">
+
+                <div class="stat-item" style="flex: 1; min-width: 200px;">
+                    <div
+                        style="font-size: 3.5rem; font-weight: 900; color: #FFD700; margin-bottom: 0.5rem; line-height: 1; letter-spacing: -1px;">
+                        R$2.000+</div>
+                    <p style="font-size: 1.15rem; color: #4a5568; font-weight: 600; margin: 0;">Ganho médio por pessoa
+                    </p>
+                </div>
+
+                <div class="stat-item" style="flex: 1; min-width: 200px;">
+                    <div
+                        style="font-size: 3.5rem; font-weight: 900; color: #FFD700; margin-bottom: 0.5rem; line-height: 1; letter-spacing: -1px;">
+                        500+</div>
+                    <p style="font-size: 1.15rem; color: #4a5568; font-weight: 600; margin: 0;">Pessoas já começaram</p>
+                </div>
+
+                <div class="stat-item" style="flex: 1; min-width: 200px;">
+                    <div
+                        style="font-size: 3.5rem; font-weight: 900; color: #FFD700; margin-bottom: 0.5rem; line-height: 1; letter-spacing: -1px;">
+                        7 dias</div>
+                    <p style="font-size: 1.15rem; color: #4a5568; font-weight: 600; margin: 0;">Tempo para vender tudo
+                    </p>
+                </div>
+
+                <div class="stat-item" style="flex: 1; min-width: 200px;">
+                    <div
+                        style="font-size: 3.5rem; font-weight: 900; color: #FFD700; margin-bottom: 0.5rem; line-height: 1; letter-spacing: -1px;">
+                        R$17,00</div>
+                    <p style="font-size: 1.15rem; color: #4a5568; font-weight: 600; margin: 0;">Investimento completo
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section class="section testimonials mt-12 mb-12" style="background: transparent;">
         <div class="container" style="display: flex; justify-content: center; padding: 40px 10px;">
 
@@ -494,7 +567,7 @@
             <div class="testimonial-phone-frame fade-in">
 
                 <div class="test-header">
-                    <h2>Experiência dos<br>alunos</h2>
+                    <h2>Histórias de<br>sucesso</h2>
                 </div>
 
                 <div class="slider-container delay-100">
@@ -662,102 +735,148 @@
     </section>
 
 
-    <section class="what-you-learn section-padding bg-white" id="conteudo">
+    <section class="what-you-learn section-padding" id="conteudo" style="background: linear-gradient(180deg, var(--bg-color) 0%, #ffffff 100%); position: relative;">
+        <style>
+            @media (max-width: 768px) {
+                .journey-line {
+                    display: none;
+                }
+                .journey-step {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 1rem !important;
+                }
+                .step-icon {
+                    width: 70px !important;
+                    height: 70px !important;
+                    margin-bottom: -15px;
+                    z-index: 10 !important;
+                }
+                .step-icon i {
+                    width: 32px !important;
+                    height: 32px !important;
+                }
+                .step-content {
+                    padding: 2rem 1.25rem !important;
+                    width: 100%;
+                }
+                .bonus-box {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 1rem !important;
+                }
+                .bonus-ribbon {
+                    right: -45px !important;
+                    top: 20px !important;
+                    padding: 5px 45px !important;
+                }
+            }
+        </style>
+        
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(139, 203, 155, 0.4), transparent);"></div>
+        
         <div class="container fade-in">
-            <div class="text-center mb-12">
-                <h2 class="section-title">Exatamente o que você vai aprender na prática:</h2>
-                <p class="section-subtitle">Sem aulas gigantes e teorias chatas. O passo a passo mastigado para você
-                    lucrar rápido.</p>
+            <div class="text-center mb-16">
+                
+                <h2 class="section-title" style="font-size: clamp(2rem, 6vw, 2.8rem); max-width: 850px; margin: 0 auto; line-height: 1.25; color: var(--brown-dark);">
+                    Tudo que você precisa para começar a vender ovos de pistache
+                </h2>
+              
             </div>
 
-            <div class="learn-cards-container mx-auto"
-                style="max-width: 800px; display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2.5rem;">
+            <div class="learning-journey" style="max-width: 850px; margin: 3.5rem auto 0; position: relative;">
+                
+                <!-- Vertical Line for Desktop -->
+                <div class="journey-line" style="position: absolute; left: 43px; top: 40px; bottom: 40px; width: 4px; background: rgba(139, 203, 155, 0.25); z-index: 1; border-radius: 4px;"></div>
 
-                <!-- Tópico 1 -->
-                <div class="glass-panel"
-                    style="padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; background: var(--bg-color); border: 1px solid rgba(92,64,51,0.05); transition: transform 0.3s ease;">
-                    <div class="list-icon"
-                        style="flex-shrink: 0; background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); color: var(--primary-dark);">
-                        <i data-lucide="shopping-cart"></i>
+                <!-- Step 1 -->
+                <div class="journey-step" style="position: relative; z-index: 2; display: flex; gap: 2rem; margin-bottom: 2.5rem; align-items: flex-start;">
+                    <div class="step-icon" style="flex-shrink: 0; width: 90px; height: 90px; background: var(--white); border-radius: 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(139, 203, 155, 0.2); border: 2px solid var(--primary-light); color: var(--primary-dark);">
+                        <i data-lucide="store" style="width: 40px; height: 40px;"></i>
                     </div>
-                    <div>
-                        <h4
-                            style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brown-dark);">
-                            O que comprar</h4>
-                        <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">A lista exata de
-                            ingredientes e utensílios baratos para você investir apenas no que realmente dá retorno.</p>
+                    <div class="step-content" style="background: var(--white); padding: 2.2rem 2.5rem; border-radius: 24px; box-shadow: var(--shadow-md); border: 1px solid rgba(0,0,0,0.04); flex-grow: 1; transition: transform 0.3s ease;">
+                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Passo 1</div>
+                        <h3 style="font-size: 1.6rem; color: var(--brown-dark); margin-bottom: 0.8rem; font-weight: 800;">O que comprar  <br>(sem gastar à toa)</h3>
+                        <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.5; margin: 0; font-weight: 500;">A lista exata dos ingredientes essenciais e de utensílios básicos e baratos para iniciar hoje mesmo na cozinha da sua casa.</p>
                     </div>
                 </div>
 
-                <!-- Tópico 2 -->
-                <div class="glass-panel"
-                    style="padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; background: var(--bg-color); border: 1px solid rgba(92,64,51,0.05); transition: transform 0.3s ease;">
-                    <div class="list-icon"
-                        style="flex-shrink: 0; background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); color: var(--primary-dark);">
-                        <i data-lucide="cookie"></i>
+                <!-- Step 2 -->
+                <div class="journey-step" style="position: relative; z-index: 2; display: flex; gap: 2rem; margin-bottom: 2.5rem; align-items: flex-start;">
+                    <div class="step-icon" style="flex-shrink: 0; width: 90px; height: 90px; background: var(--white); border-radius: 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(139, 203, 155, 0.2); border: 2px solid var(--primary-light); color: var(--primary-dark);">
+                        <i data-lucide="cookie" style="width: 40px; height: 40px;"></i>
                     </div>
-                    <div>
-                        <h4
-                            style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brown-dark);">
-                            Cascas e Recheios Perfeitos</h4>
-                        <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Do derretimento correto do
-                            chocolate ao ponto cremoso do ganache de pistache, tudo passo a passo.</p>
+                    <div class="step-content" style="background: var(--white); padding: 2.2rem 2.5rem; border-radius: 24px; box-shadow: var(--shadow-md); border: 1px solid rgba(0,0,0,0.04); flex-grow: 1; transition: transform 0.3s ease;">
+                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Passo 2</div>
+                        <h3 style="font-size: 1.6rem; color: var(--brown-dark); margin-bottom: 0.8rem; font-weight: 800;">Ovos e Recheios Perfeitos</h3>
+                        <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.5; margin: 0; font-weight: 500;">Descubra o jeito mais fácil de derreter o chocolate e criar um recheio de pistache maravilhoso e super cremoso.</p>
                     </div>
                 </div>
 
-                <!-- Tópico 3 -->
-                <div class="glass-panel"
-                    style="padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; background: var(--bg-color); border: 1px solid rgba(92,64,51,0.05); transition: transform 0.3s ease;">
-                    <div class="list-icon"
-                        style="flex-shrink: 0; background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); color: var(--primary-dark);">
-                        <i data-lucide="layout-list"></i>
+                <!-- Step 3 -->
+                <div class="journey-step" style="position: relative; z-index: 2; display: flex; gap: 2rem; margin-bottom: 2.5rem; align-items: flex-start;">
+                    <div class="step-icon" style="flex-shrink: 0; width: 90px; height: 90px; background: var(--white); border-radius: 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(139, 203, 155, 0.2); border: 2px solid var(--primary-light); color: var(--primary-dark);">
+                        <i data-lucide="utensils" style="width: 40px; height: 40px;"></i>
                     </div>
-                    <div>
-                        <h4
-                            style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brown-dark);">
-                            Organização Prática</h4>
-                        <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Como produzir dezenas de
-                            ovos em menos tempo na mesa da sua cozinha, sem desespero ou bagunça.</p>
+                    <div class="step-content" style="background: var(--white); padding: 2.2rem 2.5rem; border-radius: 24px; box-shadow: var(--shadow-md); border: 1px solid rgba(0,0,0,0.04); flex-grow: 1; transition: transform 0.3s ease;">
+                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Passo 3</div>
+                        <h3 style="font-size: 1.6rem; color: var(--brown-dark); margin-bottom: 0.8rem; font-weight: 800;">Montagem Simples e Limpa</h3>
+                        <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.5; margin: 0; font-weight: 500;">Como produzir mais ovos em menos tempo, organizando o espaço para não gerar bagunça e facilitar seu dia.</p>
                     </div>
                 </div>
 
-                <!-- Tópico 4 -->
-                <div class="glass-panel"
-                    style="padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; background: var(--bg-color); border: 1px solid rgba(92,64,51,0.05); transition: transform 0.3s ease;">
-                    <div class="list-icon"
-                        style="flex-shrink: 0; background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); color: var(--primary-dark);">
-                        <i data-lucide="calculator"></i>
+                <!-- Step 4 (With Bonus) -->
+                <div class="journey-step" style="position: relative; z-index: 2; display: flex; gap: 2rem; margin-bottom: 2.5rem; align-items: flex-start;">
+                    <div class="step-icon" style="flex-shrink: 0; width: 90px; height: 90px; background: linear-gradient(135deg, #FFD700 0%, #e2ab24 100%); border-radius: 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(226, 171, 36, 0.5); border: 3px solid #fff; color: var(--brown-dark);">
+                        <i data-lucide="calculator" style="width: 40px; height: 40px; stroke-width: 2.5px;"></i>
                     </div>
-                    <div>
-                        <h4
-                            style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brown-dark);">
-                            Precificação</h4>
-                        <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Saiba o custo exato do seu
-                            ovo e coloque um valor que pague seu trabalho e ainda te deixe muito dinheiro no bolso.</p>
+                    <div class="step-content" style="background: var(--white); padding: 2.2rem 2.5rem; border-radius: 24px; box-shadow: 0 15px 40px rgba(226, 171, 36, 0.15); border: 2px solid #e2ab24; flex-grow: 1; position: relative; overflow: hidden; transition: transform 0.3s ease;">
+                        
+                        <!-- Bonus Ribbon -->
+                        <div class="bonus-ribbon" style="position: absolute; top: 25px; right: -40px; background: #E74C3C; color: white; padding: 6px 45px; transform: rotate(45deg); font-weight: 900; font-size: 0.8rem; box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); letter-spacing: 1px; z-index: 5;">PRESENTE</div>
+
+                        <div style="font-size: 0.95rem; font-weight: 800; color: #cda434; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Passo 4</div>
+                        <h3 style="font-size: 1.6rem; color: var(--brown-dark); margin-bottom: 0.8rem; font-weight: 800;">Como cobrar e ver o lucro</h3>
+                        <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.5; margin-bottom: 1.8rem; font-weight: 500;">Chega de vender almoço pra comprar a janta. Aprenda exatamente quanto cobrar por cada ovo e veja o dinheiro sobrando.</p>
+
+                        <!-- Bonus Highlight Box -->
+                        <div class="bonus-box" style="background: linear-gradient(to right, rgba(226, 171, 36, 0.1), rgba(226, 171, 36, 0.03)); border: 1px dashed #cda434; border-radius: 16px; padding: 1.5rem; display: flex; gap: 1.25rem; align-items: center;">
+                            <div style="background: linear-gradient(135deg, #e2ab24, #cda434); color: #fff; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 6px 15px rgba(226, 171, 36, 0.5);">
+                                <i data-lucide="file-spreadsheet" style="width: 28px; height: 28px;"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.2rem; color: var(--brown-dark); margin-bottom: 0.3rem; font-weight: 800;">Bônus: Planilha Automática</h4>
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 1rem; flex-wrap: wrap;">
+                                    <span style="text-decoration: line-through; color: #a0aec0; font-weight: 600;">De R$ 67,00</span>
+                                    <span style="color: #E74C3C; font-weight: 900; background: rgba(231, 76, 60, 0.1); padding: 4px 10px; border-radius: 6px;">Por R$ 0,00 (Inclusa)</span>
+                                </div>
+                                <p style="font-size: 0.95rem; color: var(--text-light); margin: 0; margin-top: 6px; line-height: 1.4; font-weight: 500;">Esqueça a matemática difícil. A ferramenta calcula seus custos e lucro automaticamente em segundos.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- Tópico 5 -->
-                <div class="glass-panel"
-                    style="padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; background: var(--bg-color); border: 1px solid rgba(92,64,51,0.05); transition: transform 0.3s ease;">
-                    <div class="list-icon"
-                        style="flex-shrink: 0; background: var(--white); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); color: var(--primary-dark);">
-                        <i data-lucide="smartphone"></i>
+                <!-- Step 5 -->
+                <div class="journey-step" style="position: relative; z-index: 2; display: flex; gap: 2rem; margin-bottom: 0; align-items: flex-start;">
+                    <div class="step-icon" style="flex-shrink: 0; width: 90px; height: 90px; background: var(--white); border-radius: 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(139, 203, 155, 0.2); border: 2px solid var(--primary-light); color: var(--primary-dark);">
+                        <i data-lucide="smartphone" style="width: 40px; height: 40px;"></i>
                     </div>
-                    <div>
-                        <h4
-                            style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--brown-dark);">
-                            Vendas Rápidas Pelo Instagram e WhatsApp</h4>
-                        <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">Scripts de abordagem e dicas
-                            de foto para fazer as pessoas babarem pelos seus ovos e comprarem no primeiro stories.</p>
+                    <div class="step-content" style="background: var(--white); padding: 2.2rem 2.5rem; border-radius: 24px; box-shadow: var(--shadow-md); border: 1px solid rgba(0,0,0,0.04); flex-grow: 1; transition: transform 0.3s ease;">
+                        <div style="font-size: 0.95rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Passo 5</div>
+                        <h3 style="font-size: 1.6rem; color: var(--brown-dark); margin-bottom: 0.8rem; font-weight: 800;">Vendas Muito Rápidas</h3>
+                        <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.5; margin: 0; font-weight: 500;">Dicas matadoras de fotos e mensagens curtas para as pessoas olharem e quererem comprar pelo WhatsApp.</p>
                     </div>
                 </div>
 
             </div>
 
-            <div class="text-center mt-16">
-                <a href="#oferta" class="cta-button pulse cta-large">QUERO APRENDER TUDO ISSO <i
-                        data-lucide="arrow-right"></i></a>
+            <div class="text-center" style="margin-top: 5rem;">
+                <a href="#oferta" class="cta-button pulse cta-large" style="font-size: 1.35rem; padding: 1.4rem 3.5rem; text-shadow: 1px 1px 0 rgba(255,255,255,0.3);">
+                    QUERO APRENDER TUDO ISSO <i data-lucide="arrow-right"></i>
+                </a>
+               
             </div>
         </div>
     </section>
@@ -765,7 +884,9 @@
     <section class="why-pistachio section-padding relative">
         <div class="container fade-in">
             <div class="text-center mb-12">
-                <h2 class="section-title">Por que ovos de pistache chamam tanta atenção?</h2>
+                <h2 class="section-title" style="font-size: clamp(2.3rem, 7vw, 3.4rem); line-height: 1.1; max-width: 800px; margin: 0 auto 1.5rem; color: var(--brown-dark);">
+                    Por que ovos de pistache chamam tanta atenção em <span style="background: #e2ab24; color: #fff; padding: 4px 16px; border-radius: 14px; display: inline-block; transform: rotate(-1.5deg); box-shadow: 0 6px 15px rgba(226, 171, 36, 0.3); margin-left: 6px;">2026?</span>
+                </h2>
                 <p class="section-subtitle">O ingrediente que revolucionou a confeitaria gourmet.</p>
             </div>
             <div class="grid-3 mt-12">
@@ -814,7 +935,7 @@
 
     <section class="target-audience section-padding" id="para-quem">
         <div class="container fade-in">
-            <h2 class="section-title text-center">Para quem é este material?</h2>
+            <h2 class="section-title text-center" style="font-size: clamp(2.3rem, 7vw, 3.4rem); line-height: 1.1; margin-bottom: 2rem; color: var(--brown-dark);">Para quem é este material?</h2>
             <div class="grid-4 mt-12">
                 <div class="card card-hover">
                     <div class="card-icon"><i data-lucide="sparkles"></i></div>
@@ -853,8 +974,7 @@
             }
         </style>
         <div class="container fade-in text-center mx-auto" style="max-width: 900px;">
-            <h2 class="section-title mb-4 mx-auto" style="font-size: 2.2rem; line-height: 1.2; max-width: 700px;">A
-                diferença entre um ovo comum e um presente de Páscoa</h2>
+            <h2 class="section-title mb-4 mx-auto" style="font-size: clamp(2.3rem, 7vw, 3.4rem); line-height: 1.1; max-width: 800px; color: var(--brown-dark);">A Diferença</h2>
             <p class="mb-12 text-light mx-auto" style="font-size: 1.1rem; max-width: 600px;">Pequenos detalhes na
                 apresentação e no sabor podem aumentar muito o valor percebido do seu produto.</p>
 
@@ -872,8 +992,12 @@
                             loading="lazy" decoding="async">
                     </div>
                     <div style="padding: 2.5rem 2rem;">
-                        <h3 style="font-size: 1.4rem; color: #3e2723; margin-bottom: 1.5rem; font-weight: 800;">Ovo
-                            Simples</h3>
+                        <h3
+                            style="font-size: 1.4rem; color: #3e2723; margin-bottom: 1.5rem; font-weight: 800; display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+                            Ovo
+                            comum <span
+                                style="background-color: #fca5a5; padding: 4px 10px; border-radius: 6px; color: #7f1d1d; display: inline-block; font-size: 1.3rem;">R$60</span>
+                        </h3>
                         <ul
                             style="list-style: none; padding: 0; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
                             <li
@@ -910,8 +1034,12 @@
                             style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
                     </div>
                     <div style="padding: 2.5rem 2rem;">
-                        <h3 style="font-size: 1.4rem; color: #3e2723; margin-bottom: 1.5rem; font-weight: 800;">Ovo de
-                            Pistache Premium</h3>
+                        <h3
+                            style="font-size: 1.4rem; color: #3e2723; margin-bottom: 1.5rem; font-weight: 800; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                            Ovo de
+                            Pistache <span
+                                style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 6px 14px; border-radius: 8px; font-weight: 900; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4); display: inline-block; font-size: 1.6rem;">R$150</span>
+                        </h3>
                         <ul
                             style="list-style: none; padding: 0; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
                             <li
@@ -939,9 +1067,12 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="text-center mt-12 mb-4">
+                    <a href="#oferta" class="cta-button pulse cta-large" style="background-color: var(--primary); color: var(--brown-dark); text-shadow: 1px 1px 0 rgba(255,255,255,0.2);">
+                        QUERO VENDER OVOS PREMIUM <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
             </div>
-
     </section>
 
     <section class="financial-reasoning section-padding" id="raciocinio"
@@ -978,7 +1109,7 @@
                     <!-- Box Venda -->
                     <div class="math-box return-box"
                         style="background: var(--primary); border: 2px solid var(--primary-hover);">
-                        <span class="math-label text-white" style="opacity: 0.9;">1 Ovo de Colher vende por:</span>
+                        <span class="math-label text-white" style="opacity: 0.9;">1 Ovo vende por:</span>
                         <span class="math-price text-white"
                             style="font-size: 4.5rem; text-shadow: 0 4px 15px rgba(0,0,0,0.15); margin-top: 8px;">R$
                             150</span>
@@ -1044,37 +1175,58 @@
                     </div>
                 </div>
 
+                <div style="text-align: left; max-width: 480px; margin: 3.5rem auto 1rem; display: flex; align-items: center; gap: 1rem;">
+                    <span style="font-size: 0.85rem; font-weight: 800; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1.5px; white-space: nowrap;">Oque está incluso?</span>
+                    <div style="height: 1px; background: rgba(255,255,255,0.1); flex-grow: 1;"></div>
+                </div>
+
                 <!-- Lista de Itens Compacta Premium -->
                 <div class="bundle-list premium-bundle-list"
                     style="text-align: left; max-width: 480px; margin: 0 auto;">
-                    <div class="bundle-item">
-                        <i data-lucide="book-open"></i>
+                    
+                    <div class="bundle-item" style="align-items: center;">
+                        <i data-lucide="store"></i>
                         <div>
-                            <h4>Material Pistache Gourmet</h4>
-                            <p>Receitas e técnicas premium passo a passo.</p>
+                            <h4 style="margin-bottom: 2px;">Checklist: O Que Comprar</h4>
+                            <p style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; margin: 0; line-height: 1.3;">O básico para começar na cozinha de casa sem gastar à toa.</p>
                         </div>
                     </div>
-                    <div class="bundle-item">
-                        <i data-lucide="check-square"></i>
+
+                    <div class="bundle-item" style="align-items: center;">
+                        <i data-lucide="cookie"></i>
                         <div>
-                            <h4>Checklist de Materiais</h4>
-                            <p>Lista exata do que comprar sem nenhum desperdício.</p>
+                            <h4 style="margin-bottom: 2px;">Receitas de Ovos Perfeitos</h4>
+                            <p style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; margin: 0; line-height: 1.3;">Derretimento fácil e recheios de pistache super cremosos.</p>
                         </div>
                     </div>
-                    <div class="bundle-item">
-                        <i data-lucide="trending-up"></i>
+
+                    <div class="bundle-item" style="align-items: center;">
+                        <i data-lucide="utensils"></i>
                         <div>
-                            <h4>Guia de Precificação</h4>
-                            <p>Aprenda a cobrar justo e ter alta margem de lucro.</p>
+                            <h4 style="margin-bottom: 2px;">Montagem Simples e Limpa</h4>
+                            <p style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; margin: 0; line-height: 1.3;">Como produzir ovos rápido e sem bagunçar a cozinha toda.</p>
                         </div>
                     </div>
-                    <div class="bundle-item">
-                        <i data-lucide="instagram"></i>
+
+                    <div class="bundle-item" style="align-items: center; background: rgba(226, 171, 36, 0.1); padding: 12px 16px; border-radius: 12px; border: 1px dashed rgba(226, 171, 36, 0.4); margin: 8px 0;">
+                        <i data-lucide="gift" style="color: #e2ab24;"></i>
                         <div>
-                            <h4>Top Estratégias de Venda</h4>
-                            <p>Como atrair clientes pelo Instagram e WhatsApp.</p>
+                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                                <h4 style="margin: 0; color: #e2ab24;">Planilha Automática</h4>
+                                <span style="background: #E74C3C; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; letter-spacing: 0.5px;">BÔNUS</span>
+                            </div>
+                            <p style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; margin: 0; line-height: 1.4;">Cálculo de lucros em 1 minuto <strike style="opacity: 0.6; font-size: 0.85rem;">(vendido a R$ 67)</strike></p>
                         </div>
                     </div>
+
+                    <div class="bundle-item" style="align-items: center;">
+                        <i data-lucide="smartphone"></i>
+                        <div>
+                            <h4 style="margin-bottom: 2px;">Vendas Muito Rápidas</h4>
+                            <p style="color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; margin: 0; line-height: 1.3;">Dicas de fotos e roteiros para Instagram e WhatsApp.</p>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="guarantee-box mt-8"
@@ -1100,43 +1252,39 @@
             <h2 class="section-title mb-10">Dúvidas Frequentes</h2>
             <div class="faq-container text-left">
                 <details class="faq-item" open>
-                    <summary>Este material é para iniciantes?</summary>
+                    <summary>Nunca trabalhei com doces. Esse material é para mim?</summary>
                     <div class="faq-content">
-                        <p>Sim, com certeza. A linguagem é acessível, você irá aprender do básico até as finalizações
-                            premium.</p>
+                        <p><strong>Com certeza!</strong> O guia foi criado especialmente para quem está começando do zero. A linguagem é simples, sem termos difíceis, e o passo a passo é focado na prática para você não errar.</p>
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>Recebo na hora?</summary>
+                    <summary>Como recebo o guia e os bônus após a compra?</summary>
                     <div class="faq-content">
-                        <p>Sim. Assim que o pagamento for confirmado, o acesso é enviado imediatamente para o seu
-                            e-mail.</p>
+                        <p>Assim que o seu pagamento for aprovado (Pix ou Cartão é imediato), você receberá um e-mail com o acesso completo. O formato é 100% digital, pronto para você ler e usar pelo celular, tablet ou computador na mesma hora.</p>
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>Como eu acesso o material?</summary>
+                    <summary>Vou gastar muito com equipamentos e formas?</summary>
                     <div class="faq-content">
-                        <p>Através de um arquivo PDF digital de alta qualidade, você poderá deixá-lo salvo no celular ou
-                            PC e ler sempre que quiser.</p>
+                        <p>Não! Nós te ensinamos o que comprar sem gastar dinheiro à toa. Você pode começar usando equipamentos básicos da sua própria cozinha e formas super baratas encontradas em qualquer loja festas.</p>
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>Tem validade de acesso?</summary>
+                    <summary>Por quanto tempo poderei acessar esse material?</summary>
                     <div class="faq-content">
-                        <p>O acesso ao PDF é vitalício. Ficará com você para sempre.</p>
+                        <p>O acesso é <strong>vitalício</strong>, ou seja, durará para sempre. Você paga uma única vez e pode consultar as receitas e a planilha em todas as próximas Páscoas e eventos.</p>
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>Preciso de equipamentos caros?</summary>
+                    <summary>Posso vender essas receitas o ano todo?</summary>
                     <div class="faq-content">
-                        <p>Não, usar os utensílios para começar são os mais convencionais na cozinha.</p>
+                        <p>Sim, com certeza. O pistache é o sabor mais pedido do momento e não depende só da Páscoa. Você pode aproveitar as técnicas dos recheios para vender trufas, bombons e sobremesas o ano inteiro.</p>
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>Serve para vender fora da Páscoa?</summary>
+                    <summary>E se eu comprar e achar que não é pra mim?</summary>
                     <div class="faq-content">
-                        <p>Com certeza. O sabor incrível do pistache não tira férias, você poderá adaptar as receitas.
-                        </p>
+                        <p>Você não corre risco algum. O material conta com uma <strong>Garantia Incondicional de 7 Dias</strong>. Se você não gostar do conteúdo, nós devolvemos 100% do seu dinheiro, sem burocracia e direto no seu PIX ou cartão.</p>
                     </div>
                 </details>
             </div>
@@ -1144,64 +1292,36 @@
         </div>
     </section>
 
-    <section class="final-checkout-section section-padding" style="background-color: #38241E; color: var(--white);">
-        <div class="container fade-in" style="max-width: 550px; margin: 0 auto;">
+    <section class="final-checkout-section section-padding"
+        style="background-color: #38241E; color: var(--white); text-align: center;">
+        <div class="container fade-in" style="max-width: 650px; margin: 0 auto;">
 
-            <h2 class="text-center text-white mb-10" style="font-size: 1.8rem; font-weight: 800; line-height: 1.25;">
-                Tudo pronto para começar?<br>Veja tudo que você está levando hoje:
+            <h2
+                style="font-size: clamp(1.6rem, 8vw, 2.8rem); font-weight: 900; line-height: 1.1; margin-bottom: 2rem; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); text-transform: uppercase;">
+                Sua Próxima Oportunidade<br>Está Aqui
             </h2>
 
-            <div class="final-checkout-list"
-                style="display: flex; flex-direction: column; gap: 1.4rem; margin-bottom: 3.5rem;">
-                <div style="display: flex; align-items: center; gap: 14px;">
-                    <i data-lucide="check-circle-2"
-                        style="color: var(--primary); width: 26px; height: 26px; flex-shrink: 0; stroke-width: 2.5;"></i>
-                    <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">O Método Completo: Ovos de
-                        Pistache</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 14px;">
-                    <i data-lucide="check-circle-2"
-                        style="color: var(--primary); width: 26px; height: 26px; flex-shrink: 0; stroke-width: 2.5;"></i>
-                    <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">Acesso Vitalício</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 14px;">
-                    <i data-lucide="check-circle-2"
-                        style="color: var(--primary); width: 26px; height: 26px; flex-shrink: 0; stroke-width: 2.5;"></i>
-                    <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">BÔNUS 1 – Lista de Materiais
-                        Exatos</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 14px;">
-                    <i data-lucide="check-circle-2"
-                        style="color: var(--primary); width: 26px; height: 26px; flex-shrink: 0; stroke-width: 2.5;"></i>
-                    <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">BÔNUS 2 – Guia de
-                        Precificação</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 14px;">
-                    <i data-lucide="check-circle-2"
-                        style="color: var(--primary); width: 26px; height: 26px; flex-shrink: 0; stroke-width: 2.5;"></i>
-                    <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">BÔNUS 3 – Top estratégias de
-                        vendas</span>
-                </div>
-            </div>
+            <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 2rem; color: #fdf5e6; font-weight: 500;">
+                Você chegou até aqui porque está procurando uma oportunidade REAL para ganhar dinheiro extra. E a Páscoa
+                é a melhor janela de oportunidade que você vai ter este ano.
+            </p>
 
-            <div class="text-center mb-8">
-                <p style="font-size: 1.15rem; font-weight: 700; margin-bottom: 2px; color: #fff;">Tudo isso por apenas
-                </p>
-                <div
-                    style="font-size: 5.5rem; font-weight: 900; line-height: 1; margin-bottom: 5px; color: #fff; text-transform: uppercase;">
-                    R$ 17<span style="font-size: 4rem;">,00</span>
-                </div>
-                <p style="font-size: 1.2rem; font-weight: 700; color: #fff;">ou 3x R$6,45</p>
-            </div>
+            <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 3rem; color: #fdf5e6; font-weight: 500;">
+                Por apenas <strong style="font-size: 1.35rem; color: #fff;">R$ 17,00</strong>, você pode transformar sua
+                Páscoa em seu mês mais lucrativo. Milhares de pessoas já fizeram. Você será a próxima.
+            </p>
 
             <div class="text-center mb-4">
                 <a href="https://pay.cakto.com.br/3a57fh5_793560" class="cta-button pulse"
-                    style="background-color: #3B9273; color: white; width: 100%; display: flex; justify-content: center; font-size: 1.1rem; padding: 1.4rem; border-radius: 18px; border: none; box-shadow: 0 10px 25px rgba(59, 146, 115, 0.4);">
-                    <i data-lucide="lock" style="width: 22px; height: 22px; stroke-width: 2.5;"></i>
-                    <span style="font-weight: 800; letter-spacing: 0.5px;">QUERO ACESSO IMEDIATO E VITALÍCIO</span>
+                    style="background-color: #e2ab24; color: #3e2723; width: 100%; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; padding: 1.4rem; border-radius: 12px; border: none; box-shadow: 0 8px 25px rgba(226, 171, 36, 0.4);">
+                    <i data-lucide="lock" style="width: 22px; height: 22px; stroke-width: 2.5; margin-right: 8px;"></i>
+                    <span style="font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">QUERO ACESSO
+                        IMEDIATO E VITALÍCIO</span>
                 </a>
-                <p style="color: #fff; font-size: 0.95rem; font-weight: 700; margin-top: 1.5rem; line-height: 1.4;">
-                    Acesso liberado em poucos minutos <br> após a confirmação.</p>
+                <p
+                    style="color: #fdf5e6; font-size: 1rem; font-weight: 600; margin-top: 1.5rem; line-height: 1.4; opacity: 0.9;">
+                    ou 3x de R$ 6,45. Acesso liberado em poucos minutos após a confirmação.
+                </p>
             </div>
 
         </div>
